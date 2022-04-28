@@ -1,0 +1,68 @@
+.d-flex {
+    display: flex;
+    padding: 0px;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-container {
+    padding: 10px 0px 10px;
+    box-shadow: 0px 1px 0px #847E7E;
+    color: #555252;
+    
+}
+
+.logo-img {
+    width: 98px;
+    height: 84px;
+}
+
+.cart-img {
+    width: 38px;
+    height: 38px;
+    
+}
+
+
+.list-group-a {
+    font-family: 'Montserrat' sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0px 30px 0;
+    list-style-type: none;
+    align-items: center;
+}
+
+.input-container {
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+
+.form {
+    width: 270px;
+    height: 40px;
+    padding: 0px 15px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search {
+    border: none;
+    padding:0px 15px 0px;
+    width: 200px;
+    height: 36px;
+    border-radius: 15px;
+    outline: none;
+
+}
+
+.fa-solid {
+    padding: 10px 10px 10px 0px;
+    color: #555252;
+}
+
