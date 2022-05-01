@@ -6,14 +6,16 @@
     justify-content: space-between;
 }
 
-.header-container {
-    padding: 10px 0px 10px;
-    box-shadow: 0px 1px 0px #847E7E;
-    color: #555252;
-    
+.header-in {
+    margin-bottom: 15px;
 }
 
-.logo-img {
+.header-container {
+    padding: 10px 100px 10px;
+    color: #555252;
+}
+
+.logo-img-header {
     width: 98px;
     height: 84px;
 }

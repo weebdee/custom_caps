@@ -1,5 +1,6 @@
 import Header from "../header";
-import SearchRes from "../search-result";
+import Footer from "../footer";
+import MainPage from "../main_page";
 
 import './app.css'
 
@@ -7,7 +8,8 @@ function App() {
   return (
     <div className="app-container">
       <Header/>
-      <SearchRes />
+      <MainPage />
+      <Footer/>
     </div>
   );
 }
