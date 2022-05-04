@@ -6,8 +6,13 @@ import './search-res.css'
 const SearchRes = () => {
     return (
         <div className='result-container'>
-            <p>Поиск</p>
+            <div className='search'>
+                <a className='search-page'>Поиск</a>
+                <p className='search-page'>&gt;</p>
+                <a className='search-res-page'>Adidas</a>
+            </div>
             <div className='result-flex'>
+
                 <div className='result-item'>
                     <div className='img-container'>
                         <div className='result-img'></div>

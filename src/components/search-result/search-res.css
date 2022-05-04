@@ -1,5 +1,17 @@
 .result-container {
     color: #555252;
+    padding: 0px 100px 0px;
+}
+.search{
+    margin: 10px 0px 20px 0px;
+    display: flex;
+    padding: 0px;
+}
+.search-page{
+    margin-right: 7px;
+}
+.search-res-page {
+    color: #FDDB16;
 }
 .result-flex {
     display: flex;
