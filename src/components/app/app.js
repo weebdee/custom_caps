@@ -12,7 +12,7 @@ function App() {
       <Header/>
       {/* <MainPage /> */}
       <Catalog />
-      <SearchRes />
+      {/* <SearchRes /> */}
       <Footer/>
     </div>
   );
