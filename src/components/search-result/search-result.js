@@ -5,110 +5,118 @@ import './search-res.css'
 
 const SearchRes = () => {
     return (
-        <div className='result-container'>
-            <div className='search-box'>
-                <a className='search-page'>Поиск</a>
-                <p className='search-page'>&gt;</p>
-                <a className='search-res-page'>Adidas</a>
+        <div className='result-container main-container'>
+            <div className='links-container'>
+                <a className='from-page'>Поиск</a>
+                <p className='from-page'>&gt;</p>
+                <a className='to-page'>Adidas</a>
             </div>
-            <div className='result-flex'>
+            <div className='caps-catalog-flex'>
 
-                <div className='result-item'>
-                    <div className='img-container'>
-                        <div className='result-img'></div>
+                <div className='catalog-product'>
+                    <div className='product-img-container'>
+                        <div className='caps-product-img'></div>
                     </div>
-                    <div className='result-content'>
-                        <div className='result-desc'>
+                    <div className='caps-product-content'>
+                        <div className='product-desc'>
                             <h3>Nike</h3>
                             <p>French Fries Series</p>
                         </div>
-                        <div className='result-price'>3500c</div>
+                        <div className='product-desc-price'>3500c</div>
                     </div>
                 </div>
-                <div className='result-item'>
-                    <div className='img-container'>
-                        <div className='result-img'></div>
+
+                <div className='catalog-product'>
+                    <div className='product-img-container'>
+                        <div className='caps-product-img'></div>
                     </div>
-                    <div className='result-content'>
-                        <div className='result-desc'>
+                    <div className='caps-product-content'>
+                        <div className='product-desc'>
                             <h3>Nike</h3>
                             <p>French Fries Series</p>
                         </div>
-                        <div className='result-price'>3500c</div>
+                        <div className='product-desc-price'>3500c</div>
                     </div>
                 </div>
-                <div className='result-item'>
-                    <div className='img-container'>
-                        <div className='result-img'></div>
+
+                <div className='catalog-product'>
+                    <div className='product-img-container'>
+                        <div className='caps-product-img'></div>
                     </div>
-                    <div className='result-content'>
-                        <div className='result-desc'>
+                    <div className='caps-product-content'>
+                        <div className='product-desc'>
                             <h3>Nike</h3>
                             <p>French Fries Series</p>
                         </div>
-                        <div className='result-price'>3500c</div>
+                        <div className='product-desc-price'>3500c</div>
                     </div>
                 </div>
-                <div className='result-item'>
-                    <div className='img-container'>
-                        <div className='result-img'></div>
+
+                <div className='catalog-product'>
+                    <div className='product-img-container'>
+                        <div className='caps-product-img'></div>
                     </div>
-                    <div className='result-content'>
-                        <div className='result-desc'>
+                    <div className='caps-product-content'>
+                        <div className='product-desc'>
                             <h3>Nike</h3>
                             <p>French Fries Series</p>
                         </div>
-                        <div className='result-price'>3500c</div>
+                        <div className='product-desc-price'>3500c</div>
                     </div>
                 </div>
-                <div className='result-item'>
-                    <div className='img-container'>
-                        <div className='result-img'></div>
+
+                <div className='catalog-product'>
+                    <div className='product-img-container'>
+                        <div className='caps-product-img'></div>
                     </div>
-                    <div className='result-content'>
-                        <div className='result-desc'>
+                    <div className='caps-product-content'>
+                        <div className='product-desc'>
                             <h3>Nike</h3>
                             <p>French Fries Series</p>
                         </div>
-                        <div className='result-price'>3500c</div>
+                        <div className='product-desc-price'>3500c</div>
                     </div>
                 </div>
-                <div className='result-item'>
-                    <div className='img-container'>
-                        <div className='result-img'></div>
+
+                <div className='catalog-product'>
+                    <div className='product-img-container'>
+                        <div className='caps-product-img'></div>
                     </div>
-                    <div className='result-content'>
-                        <div className='result-desc'>
+                    <div className='caps-product-content'>
+                        <div className='product-desc'>
                             <h3>Nike</h3>
                             <p>French Fries Series</p>
                         </div>
-                        <div className='result-price'>3500c</div>
+                        <div className='product-desc-price'>3500c</div>
                     </div>
                 </div>
-                <div className='result-item'>
-                    <div className='img-container'>
-                        <div className='result-img'></div>
+
+                <div className='catalog-product'>
+                    <div className='product-img-container'>
+                        <div className='caps-product-img'></div>
                     </div>
-                    <div className='result-content'>
-                        <div className='result-desc'>
+                    <div className='caps-product-content'>
+                        <div className='product-desc'>
                             <h3>Nike</h3>
                             <p>French Fries Series</p>
                         </div>
-                        <div className='result-price'>3500c</div>
+                        <div className='product-desc-price'>3500c</div>
                     </div>
                 </div>
-                <div className='result-item'>
-                    <div className='img-container'>
-                        <div className='result-img'></div>
+
+                <div className='catalog-product'>
+                    <div className='product-img-container'>
+                        <div className='caps-product-img'></div>
                     </div>
-                    <div className='result-content'>
-                        <div className='result-desc'>
+                    <div className='caps-product-content'>
+                        <div className='product-desc'>
                             <h3>Nike</h3>
                             <p>French Fries Series</p>
                         </div>
-                        <div className='result-price'>3500c</div>
+                        <div className='product-desc-price'>3500c</div>
                     </div>
                 </div>
+                
                 
             </div>
         </div>

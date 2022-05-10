@@ -1,63 +1,16 @@
 .slider-card-container {
     padding: 0px 100px 0px;
 }
-.card-container {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    margin: 50px 0px;
-    
-}
-.card {
-    display: flex;
-    width: 230px;
-    height: 122px;
-    background: #FFFFFF;
-    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-    
-    justify-content: space-around;
-}
-
 .flex-row {
     margin-right: 30px;
-}
-.card-desc {
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-}
-.card-img {
-    width: 109px;
-    height: 81px;
-}
-.card-text-desc {
-    font-family: 'Montserrat';
-    font-style: normal;
-    color: #847E7E;
 }
 .desc-year {
     font-weight: 300;
     font-size: 11px;
     line-height: 13px;
 }
-.desc-tittle {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 17px;
-}
-.desc-class {
-    font-weight: 400;
-    font-size: 10px;
-    line-height: 12px;
-    letter-spacing: -0.05em;
-}
-.text-desc-price {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 17px;
+.text-margin {
     margin: 12px 20px 0px 38px;
-    color: #FDDB16;
 }
 .small-caps-container {
     display: flex;

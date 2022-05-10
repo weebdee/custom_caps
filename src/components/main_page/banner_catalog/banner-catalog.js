@@ -56,7 +56,7 @@ const BannerCatalog = () => {
                     Supreme & New Era
                 </h1>
                 <p className='c-minor-desc'>collaboration</p>
-                <a className="c-desc-btn" href="#">Открыть каталог</a>
+                <a className="c-desc-btn purple-btn btn" href="#">Открыть каталог</a>
             </div>
 
             <img className='banner-c-caps' src={imgUrl}></img>

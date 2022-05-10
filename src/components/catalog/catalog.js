@@ -5,10 +5,10 @@ import './catalog.css'
 const Catalog = () => {
     return (
         <div className='catalog-container'>
-            <div className='home'>
-                <a className='home-page'>Home</a>
-                <p className='home-page'>&gt;</p>
-                <a className='catalog-page'>Каталог</a>
+            <div className='links-container main-container'>
+                <a className='from-page'>Home</a>
+                <p className='from-page'>&gt;</p>
+                <a className='to-page'>Каталог</a>
             </div>
             <div className='catalog-banner-container'>
                 <div className='catalog-b-desc'>
@@ -26,7 +26,7 @@ const Catalog = () => {
                 </select>
             </div>
 
-            <div className='caps-catalog-flex'>
+            <div className='caps-catalog-flex main-container'>
                 <div className='catalog-product'>
                     <div className='product-img-container'>
                         <div className='caps-product-img'></div>

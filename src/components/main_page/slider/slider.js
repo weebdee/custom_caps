@@ -15,7 +15,7 @@ const Slider = () => {
                         <p className="desc-year">2021</p>
                         <p className="desc-tittle">New Era</p>
                         <p className="desc-class">Housten Rocket</p>
-                        <div className="text-desc-price">2399c</div>
+                        <div className="text-margin card-desc-price">2399c</div>
                     </div>
                 </div>
             </div>
@@ -29,7 +29,7 @@ const Slider = () => {
                         <p className="desc-year">2021</p>
                         <p className="desc-tittle">New Era</p>
                         <p className="desc-class">Housten Rocket</p>
-                        <div className="text-desc-price">2399c</div>
+                        <div className="text-margin card-desc-price">2399c</div>
                     </div>
                 </div>
             </div>
@@ -43,10 +43,12 @@ const Slider = () => {
                         <p className="desc-year">2021</p>
                         <p className="desc-tittle">New Era</p>
                         <p className="desc-class">Housten Rocket</p>
-                        <div className="text-desc-price">2399c</div>
+                        <div className="text-margin card-desc-price">2399c</div>
                     </div>
                 </div>
             </div>
+
+
 
             
         </div>
