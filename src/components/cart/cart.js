@@ -13,7 +13,7 @@ const Cart = () => {
             <hr className='thick-hr'/>
             <div className='cart'>
                 <img src={kepka3} alt=""/>
-                <div className='cart-count'>
+                <div className='product-count'>
                     <input type="button" value='-'/>
                     <p>1</p>
                     <input type="button" value='+'/>

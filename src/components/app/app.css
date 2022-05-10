@@ -155,3 +155,27 @@
     background-color: #670098;
     color: #FFFFFF;
 }
+
+.product-count {
+    display: flex;
+    width: 119px;
+    height: 48px;
+    border: 1px solid #847E7E;
+    border-radius: 10px;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.product-count input{
+    border: none;
+    background: none;
+    font-size: 25px;
+}
+.product-count p{
+    font-size: 27px;
+    opacity: 0.5;
+}
+
+
