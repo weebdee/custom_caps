@@ -1,0 +1,40 @@
+.custom {
+    margin-top: 144px;
+    margin-bottom: 114px;
+    padding: 0px 100px 0px; 
+}
+.custom h1 {
+    font-family: 'Montserrat' sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 37px;
+    color: #000000;
+}
+.num {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 42px;
+}
+.num h3 {
+    font-family: 'Montserrat' sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 59px;
+    color: #FDDB16;
+    margin-right: 10px;
+}
+.num p {
+    font-family: 'Montserrat' sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    margin-top: 14px;
+    margin-right: 10px;
+}
+.number {
+    display: flex;
+}

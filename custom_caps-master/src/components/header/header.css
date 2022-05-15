@@ -1,0 +1,118 @@
+.d-flex {
+    display: flex;
+    padding: 0px;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-in {
+    margin-bottom: 15px;
+}
+
+.header-container {
+    padding: 10px 100px 10px;
+    color: #555252;
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+    .header-container {
+        padding: 0;
+        /*background-image: url("header-img/Гамбургер (1).svg");*/
+    }
+}
+
+.logo-img-header {
+    width: 98px;
+    height: 84px;
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+    .logo-img-header {
+        width: 45px;
+        height: 40.32px;
+        margin-left: 15px;
+        margin-top: 10px;
+    }
+}
+.cart-img {
+    width: 38px;
+    height: 38px;
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+    .cart-img {
+        width: 24px;
+        height: 24px;
+        margin-right: 100px;
+        margin-top: 18px;
+
+    }
+}
+
+.list-group-a {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0px 30px 0;
+    list-style-type: none;
+    align-items: center;
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+    .list-group-a {
+        display: none;
+    }
+}
+
+.input-container {
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 480px) {
+    .input-container {
+        position: absolute;
+        margin-top: 135px;
+        left: 50px;
+    }
+}
+.form {
+    width: 270px;
+    height: 40px;
+    padding: 0px 15px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+    .form {
+        width: auto;
+        height: auto;
+    }
+}
+
+.search {
+    border: none;
+    padding:0px 15px 0px;
+    width: 200px;
+    height: 36px;
+    border-radius: 15px;
+    outline: none;
+
+}
+/*@media screen and (min-width: 310px) and (max-width: 480px) {*/
+/*    .search {*/
+/*        position: absolute;*/
+/*        width: 200%;*/
+/*        height: 28px;*/
+/*        left: 33px;*/
+/*        top: 61px;*/
+
+/*    }*/
+/*}*/
+.fa-solid {
+    padding: 10px 10px 10px 0px;
+    color: #555252;
+}
+
