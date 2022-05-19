@@ -1,0 +1,106 @@
+.banner-c-container {
+    display: flex;
+    padding: 0px 100px 0px;
+    background: linear-gradient(93.98deg, #FDDB16 0.21%, #FFB800 100%);
+    background-size: cover;
+}
+
+@media screen and (min-width: 0px) and (max-width: 480px){
+    .banner-c-container {
+        display: block;
+        padding: 0px 36px 0px;
+        background: linear-gradient(93.98deg, #FDDB16 0.21%, #FFB800 100%);
+    }
+}
+.flex-column {
+    flex-direction: column;
+    margin-top: 29px;
+}
+
+.flex-column-top {
+
+}
+@media screen and (min-width: 0px) and (max-width: 480px){
+    .flex-column-top {
+        margin-top: 30px;
+    }
+}
+
+
+.banner-c-desc{
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    margin-top: 133px;
+    margin-left: 67px;
+}
+@media screen and (min-width: 0px) and (max-width: 480px){
+    .banner-c-desc{
+        margin-top: 20px;
+        margin-left: -29px;
+        height: 3px;
+    }
+}
+
+.c-major-desc {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+    .c-major-desc {
+        font-family: 'Montserrat';
+        font-weight: 900;
+        font-size: 18px;
+        margin-top: 30px;
+        line-height: 22px;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: #555252;
+    }
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 480px){
+    .c-minor-desc{
+        color: #555252;
+        font-weight: 900;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 0.15em;
+        text-transform: lowercase;
+    }
+}
+
+.c-desc-btn {
+    width: 230px;
+    height: 60px;
+    margin-top: 40px;
+}
+@media screen and (min-width: 0px) and (max-width: 480px){
+    .c-desc-btn {
+        width: 141px;
+        height: 30px;
+        margin-top: 15px;
+        border-radius: 20px;
+    }
+}
+
+.banner-c-caps {
+    position: absolute;
+    right: 0px;
+    top: 1770px;
+    width: 951.25px;
+    height: 445.9px;
+}
+/*как теперь поменять картинку под это  */
+
+
+@media screen and (min-width: 0px) and (max-width: 480px){
+    .banner-c-caps{
+        display: none;
+    }
+}
