@@ -34,7 +34,7 @@ const Slider = () => {
                 </div>
             </div>
 
-            <div className="card flex-row">
+            <div className="card">
                 <div className="card-desc">
                     <a href="">
                     <img className="card-img" src={require('./img-slider/adidas.jpg')} alt=""/>
@@ -53,7 +53,7 @@ const Slider = () => {
             
         </div>
 
-        <div className='small-caps-container'>
+        {/* <div className='small-caps-container'>
             <div className='small-c-custom'>
                 <div className='small-c-desc'>
                     <h3>Кастомные</h3>
@@ -66,7 +66,7 @@ const Slider = () => {
                     <p>Найди уникальные кепки</p>
                 </div>
             </div>
-        </div>
+        </div> */}
 
         <div className="head">
             <h1> TOP SELLERS </h1>

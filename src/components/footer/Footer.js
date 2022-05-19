@@ -8,6 +8,47 @@ import twitter from './images/twitter.svg'
     return (
         <div className='footer'>
             <hr/>
+            <div className='footer-adaptive'>
+                <div className='left'>
+                    <div className='footer-info'>
+                        <div className='products'>
+                            <h4>Продукция</h4>
+                            <a href=""><p>Кепки</p></a>
+                            <a href=""><p>Шапки</p></a>
+                            <a href=""><p>Панамки</p></a>
+                            <a href=""><p>Кастомизация</p></a>
+                            <a href=""><p>Другая продукция</p></a>
+                            <a href=""><p>Эксклюзив</p></a>
+                        </div>
+                        <div className='about-company'>
+                            <h4>О компании</h4>
+                            <a href=""><p>О нас</p></a>
+                            <a href=""><p>Контакты</p></a>
+                        </div>
+                    </div>
+            
+                    <div className='subscribe'>
+                        <h4>Подписаться на новинки</h4>
+                        <form action="" className='form'>
+                            <input type="text" placeholder='Email address' className='email-text' />
+                            <button>
+                                <a href=""><img className='submit' src={require('../footer/images/sub.png')} alt="sub"/></a>
+                            </button>
+                        </form>
+                        </div>
+                    </div>
+                  
+                    <div className='cards'>
+                        <div className='card-style'>
+                            <a href=""><img className='vector' src={require('../footer/images/vector.png')} alt="vector"/></a>
+                            <a href=""><img className='mastercard' src={require('../footer/images/mastercard.png')} alt="master"/></a>
+                            <a href=""><img className='visa' src={require('../footer/images/visa.png')} alt="visa"/></a>
+                        </div>
+                        <h4>+996 755 999820</h4>
+                    </div>
+                </div>
+            <hr/>
+
             <div className='second'>
                 <div className='main'>
                     <div className='logo'>

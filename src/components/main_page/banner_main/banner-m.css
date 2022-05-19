@@ -2,7 +2,16 @@
     height: 460px;
     background: linear-gradient(90.87deg, #F8F7F7 0.69%, rgba(227, 227, 227, 0.56) 98.66%);
 }
-
+@media (max-width: 1000px) {
+    .main-banner-container {
+        height: 370px;
+    }
+}
+/* @media (max-width: 970px) {
+    .main-banner-container {
+        height: 299px;
+    }
+} */
 .banner-main-text {
     display: flex;
     flex-direction: column;
@@ -12,6 +21,13 @@
     margin-left: 130px;
 
 }
+@media (max-width: 1000px) {
+    .banner-main-text {
+        height: 370px;
+        width: 368px;
+        margin-left: 100px;
+    }
+}
 .banner-main-text p {
     font-weight: 400;
     font-size: 18px;
@@ -19,17 +35,30 @@
 
     color: #555252;
 }
+@media (max-width: 1000px) {
+    .banner-main-text p{
+        font-size: 14px;
+        line-height: 17px;
+    }
+}
+
 .banner-main-tittle {
     display: flex;
     align-items: baseline;
     margin-top: 70px;
-    width: 700px;
 }
 .banner-main-tittle h1 {
     font-weight: 700;
     font-size: 96px;
     line-height: 117px;
     color: #070D3F;
+}
+@media (max-width: 1000px) {
+    .banner-main-text h1{
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 78px;
+    }
 }
 .square {
     width: 15px;
@@ -43,9 +72,69 @@
 .cap-left {
     transform: translate(0px, -50px);
 }
+@media (max-width: 1000px) {
+    .cap-left {
+        width: 170px;
+        transform: translate(0px, -40px);
+    }
+}
+@media (max-width: 970px) {
+    .cap-left {
+        width: 150px;
+        transform: translate(0px, -40px);
+    }
+}
 .ellipse-right {
     transform: translate(-60px, 330px);
 }
+@media (max-width: 1000px) {
+    .ellipse-right {
+        transform: translate(-60px, 240px);
+    }
+}
+@media (max-width: 815px) {
+    .ellipse-right  {
+        width: 70px;
+        transform: translate(-25px, 265px);
+    }
+}
 .cap-center {
-    transform: translate(590px, -70px);;
+    transform: translate(590px, -70px);
+    
+}
+@media (max-width: 1000px) {
+    .cap-center {
+        width: 400px;
+        transform: translate(450px, 10px);
+    }
+}
+@media (max-width: 970px) {
+    .cap-center {
+        width: 370px;
+        transform: translate(435px, 35px);
+    }
+}
+@media (max-width: 865px) {
+    .cap-center {
+        width: 320px;
+        transform: translate(435px, 35px);
+    }
+}
+@media (max-width: 815px) {
+    .cap-center {
+        width: 300px;
+        transform: translate(435px, 35px);
+    }
+}
+@media (max-width: 1000px) {
+    .cap-right {
+        width: 180px;
+        transform: translate(0px, 10px);
+    }
+}
+@media (max-width: 970px) {
+    .cap-right {
+        width: 140px;
+        transform: translate(0px, 10px);
+    }
 }

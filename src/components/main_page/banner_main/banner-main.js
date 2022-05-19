@@ -14,7 +14,7 @@ const BannerMain = () => {
         <div className="main-banner-container">
             <img src={ellipse1} className='p-absolute '/>
             <img src={kepka2} className='p-absolute cap-left'/>
-            <img src={kepka3} className='p-absolute absolute-right'/>
+            <img src={kepka3} className='p-absolute absolute-right cap-right'/>
             <img src={ellipse2} className='p-absolute absolute-right ellipse-right'/>
             <img src={ellipse3} className='p-absolute absolute-right ellipse-right'/>
             <img src={kepka1} className='p-absolute cap-center'/>

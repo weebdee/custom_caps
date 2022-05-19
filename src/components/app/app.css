@@ -25,6 +25,16 @@
     margin: 50px 0px;
     
 }
+
+@media (max-width: 1000px) {
+    .card-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 50px 0px;
+        
+    }
+}
 .card {
     display: flex;
     width: 230px;
@@ -33,6 +43,13 @@
     box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     justify-content: space-around;
+}
+@media (max-width: 1000px) {
+    .card-adaptive {
+        width: 180px;
+        height: 100px;
+        
+    }
 }
 .card-desc {
     display: flex;
@@ -43,10 +60,22 @@
     width: 109px;
     height: 81px;
 }
+@media (max-width: 1000px) {
+    .card-img {
+        width: 90px;
+
+    }
+}
 .card-text-desc {
     font-family: 'Montserrat';
     font-style: normal;
     color: #847E7E;
+}
+
+@media (max-width: 1000px) {
+    .card-desc {
+        padding: 15px;
+    }
 }
 .desc-tittle {
     font-weight: 700;
@@ -145,6 +174,18 @@
     font-size: 18px;
     line-height: 22px;
     text-decoration: none;
+}
+
+@media (max-width: 1000px) {
+    .btn  {
+        padding: 10px 20px;
+        margin-top: 28px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        width: 172px;
+        height: 40px;
+    }
 }
 .yellow-btn {
     background-color:#FDDB16;

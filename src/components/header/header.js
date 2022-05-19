@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom'
 
 import './header.css';
 
@@ -10,7 +11,10 @@ const Header = () => {
                     <img className='logo-img-header' src={require('./header-img/logo.png')} alt={'logo-img'} ></img>
                 </a>
                 <ul className="list-container d-flex">
-                    <li className='list-group-a'>Каталог</li>
+                    <li className='list-group-a'>
+                        <Link className='list-group-a' to='/catalog/'> Каталог </Link>
+                    </li>
+                    <li className='list-group-a list-group-a-adap'>Кастомные</li>
                     <li className='list-group-a'>Бренды</li>
                     <li className='list-group-a'>О нас</li>
                 </ul>
@@ -21,9 +25,9 @@ const Header = () => {
                         <i className="fa-solid fa-magnifying-glass"></i>
                     </form>
                 </div>
-                <a href='/'>
+                <Link to='/cart/'>
                     <img className='cart-img' src={require('./header-img/shop-cart.png')} alt={'cart-img'}></img>
-                </a>
+                </Link>
             </div>
             <hr/>
         </div>

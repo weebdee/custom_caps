@@ -4,12 +4,24 @@
     background: linear-gradient(93.98deg, #FDDB16 0.21%, #FFB800 100%);
     background-size: cover;
 }
+@media (max-width:1000px) {
+    .banner-c-container {
+         padding:10px 30px 10px;
+         height: 388px;
+    }
+}
 .flex-column {
     flex-direction: column;
 }
 
 .flex-column-top {
     margin-bottom: 30px;
+}
+@media (max-width: 1000px) {
+    .flex-column-top{
+        width: 185px;
+        height: 100px;
+    }
 }
 
 .banner-c-desc{
@@ -19,6 +31,12 @@
     margin-top: 133px;
     margin-left: 67px;
 }
+@media (max-width: 1000px) {
+    .banner-c-desc{
+        margin-top: 97px;
+        margin-left: 50px;
+    }
+}
 .c-major-desc {
     font-style: normal;
     font-weight: 900;
@@ -27,13 +45,26 @@
     letter-spacing: 0.15em;
     text-transform: uppercase;
 }
-
+@media (max-width: 1000px) {
+    .c-major-desc {
+        font-size: 24px;
+        line-height: 29px;
+    }
+}
 .c-minor-desc {
     font-size: 36px;
     font-weight: 400;
     line-height: 44px;
     text-align: left;
     text-transform: lowercase;
+}
+
+@media (max-width: 1000px) {
+    .c-minor-desc {
+        font-size: 20px;
+        font-weight: 200;
+        line-height: 22px;
+    }
 }
 
 .c-desc-btn {
@@ -45,7 +76,25 @@
 .banner-c-caps {
     position: absolute;
     right: 0px;
-    top: 1770px;
+    top: 1370px;
     width: 951.25px;
     height: 445.9px;
+}
+@media (max-width:1000px) {
+    .banner-c-caps {
+        top: 1170px;
+        width: 700px;
+    }
+}
+@media (max-width:910px) {
+    .banner-c-caps {
+        top: 1170px;
+        width: 600px;
+    }
+}
+@media (max-width:835px) {
+    .banner-c-caps {
+        top: 1170px;
+        width: 500px;
+    }
 }
