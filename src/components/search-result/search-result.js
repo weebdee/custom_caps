@@ -15,7 +15,7 @@ const SearchRes = () => {
 
                 <div className='catalog-product'>
                     <div className='product-img-container'>
-                        <div className='caps-product-img'></div>
+                        <a href='/prod-info/'><div className='caps-product-img'></div></a>
                     </div>
                     <div className='caps-product-content'>
                         <div className='product-desc'>
@@ -28,7 +28,7 @@ const SearchRes = () => {
 
                 <div className='catalog-product'>
                     <div className='product-img-container'>
-                        <div className='caps-product-img'></div>
+                    <a href='/prod-info/'><div className='caps-product-img'></div></a>
                     </div>
                     <div className='caps-product-content'>
                         <div className='product-desc'>
@@ -41,7 +41,7 @@ const SearchRes = () => {
 
                 <div className='catalog-product'>
                     <div className='product-img-container'>
-                        <div className='caps-product-img'></div>
+                    <a href='/prod-info/'><div className='caps-product-img'></div></a>
                     </div>
                     <div className='caps-product-content'>
                         <div className='product-desc'>
@@ -54,7 +54,7 @@ const SearchRes = () => {
 
                 <div className='catalog-product'>
                     <div className='product-img-container'>
-                        <div className='caps-product-img'></div>
+                    <a href='/prod-info/'><div className='caps-product-img'></div></a>
                     </div>
                     <div className='caps-product-content'>
                         <div className='product-desc'>
@@ -67,7 +67,7 @@ const SearchRes = () => {
 
                 <div className='catalog-product'>
                     <div className='product-img-container'>
-                        <div className='caps-product-img'></div>
+                    <a href='/prod-info/'><div className='caps-product-img'></div></a>
                     </div>
                     <div className='caps-product-content'>
                         <div className='product-desc'>
@@ -80,7 +80,7 @@ const SearchRes = () => {
 
                 <div className='catalog-product'>
                     <div className='product-img-container'>
-                        <div className='caps-product-img'></div>
+                    <a href='/prod-info/'><div className='caps-product-img'></div></a>
                     </div>
                     <div className='caps-product-content'>
                         <div className='product-desc'>
@@ -93,7 +93,7 @@ const SearchRes = () => {
 
                 <div className='catalog-product'>
                     <div className='product-img-container'>
-                        <div className='caps-product-img'></div>
+                    <a href='/prod-info/'><div className='caps-product-img'></div></a>
                     </div>
                     <div className='caps-product-content'>
                         <div className='product-desc'>
@@ -106,7 +106,7 @@ const SearchRes = () => {
 
                 <div className='catalog-product'>
                     <div className='product-img-container'>
-                        <div className='caps-product-img'></div>
+                    <a href='/prod-info/'><div className='caps-product-img'></div></a>
                     </div>
                     <div className='caps-product-content'>
                         <div className='product-desc'>
