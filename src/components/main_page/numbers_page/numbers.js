@@ -4,7 +4,8 @@ import './numbers.css'
 
 const Numbers = () => {
     return (
-        <div className='custom'>
+        <div className='custom main-container'>
+            <a name='aboutUs'/>
             <h1>CUSTOM CUPS в цифрах</h1>
             <div className='num'>
                 <div className='number'>

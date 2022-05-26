@@ -6,9 +6,9 @@ const Catalog = () => {
     return (
         <div className='catalog-container'>
             <div className='links-container main-container'>
-                <a className='from-page'>Home</a>
+                <a href='/' className='from-page'>Home</a>
                 <p className='from-page'>&gt;</p>
-                <a className='to-page'>Каталог</a>
+                <a href='/catalog/' className='to-page'>Каталог</a>
             </div>
             <div className='catalog-banner-container'>
                 <div className='catalog-b-desc'>
@@ -29,7 +29,7 @@ const Catalog = () => {
             <div className='caps-catalog-flex main-container'>
                 <div className='catalog-product'>
                     <div className='product-img-container'>
-                        <div className='caps-product-img'></div>
+                        <a href='/prod-info/'><div className='caps-product-img'></div></a>
                     </div>
                     <div className='caps-product-content'>
                         <div className='product-desc'>
@@ -42,7 +42,7 @@ const Catalog = () => {
 
                 <div className='catalog-product'>
                     <div className='product-img-container'>
-                        <div className='caps-product-img'></div>
+                        <a href='/prod-info/'><div className='caps-product-img'></div></a>
                     </div>
                     <div className='caps-product-content'>
                         <div className='product-desc'>
@@ -55,7 +55,7 @@ const Catalog = () => {
 
                 <div className='catalog-product'>
                     <div className='product-img-container'>
-                        <div className='caps-product-img'></div>
+                        <a href='/prod-info/'><div className='caps-product-img'></div></a>
                     </div>
                     <div className='caps-product-content'>
                         <div className='product-desc'>
@@ -68,7 +68,7 @@ const Catalog = () => {
 
                 <div className='catalog-product'>
                     <div className='product-img-container'>
-                        <div className='caps-product-img'></div>
+                        <a href='/prod-info/'><div className='caps-product-img'></div></a>
                     </div>
                     <div className='caps-product-content'>
                         <div className='product-desc'>
@@ -81,7 +81,7 @@ const Catalog = () => {
 
                 <div className='catalog-product'>
                     <div className='product-img-container'>
-                        <div className='caps-product-img'></div>
+                        <a href='/prod-info/'><div className='caps-product-img'></div></a>
                     </div>
                     <div className='caps-product-content'>
                         <div className='product-desc'>
@@ -94,7 +94,7 @@ const Catalog = () => {
 
                 <div className='catalog-product'>
                     <div className='product-img-container'>
-                        <div className='caps-product-img'></div>
+                    <a href='/prod-info/'><div className='caps-product-img'></div></a>
                     </div>
                     <div className='caps-product-content'>
                         <div className='product-desc'>
@@ -107,7 +107,7 @@ const Catalog = () => {
 
                 <div className='catalog-product'>
                     <div className='product-img-container'>
-                        <div className='caps-product-img'></div>
+                        <a href='/prod-info/'><div className='caps-product-img'></div></a>
                     </div>
                     <div className='caps-product-content'>
                         <div className='product-desc'>
@@ -120,7 +120,7 @@ const Catalog = () => {
 
                 <div className='catalog-product'>
                     <div className='product-img-container'>
-                        <div className='caps-product-img'></div>
+                        <a href='/prod-info/'><div className='caps-product-img'></div></a>
                     </div>
                     <div className='caps-product-content'>
                         <div className='product-desc'>
@@ -133,7 +133,7 @@ const Catalog = () => {
 
                 <div className='catalog-product'>
                     <div className='product-img-container'>
-                        <div className='caps-product-img'></div>
+                        <a href='/prod-info/'><div className='caps-product-img'></div></a>
                     </div>
                     <div className='caps-product-content'>
                         <div className='product-desc'>
@@ -146,7 +146,7 @@ const Catalog = () => {
 
                 <div className='catalog-product'>
                     <div className='product-img-container'>
-                        <div className='caps-product-img'></div>
+                    <a href='/prod-info/'><div className='caps-product-img'></div></a>
                     </div>
                     <div className='caps-product-content'>
                         <div className='product-desc'>
@@ -159,7 +159,7 @@ const Catalog = () => {
 
                 <div className='catalog-product'>
                     <div className='product-img-container'>
-                        <div className='caps-product-img'></div>
+                    <a href='/prod-info/'><div className='caps-product-img'></div></a>
                     </div>
                     <div className='caps-product-content'>
                         <div className='product-desc'>
@@ -172,7 +172,7 @@ const Catalog = () => {
 
                 <div className='catalog-product'>
                     <div className='product-img-container'>
-                        <div className='caps-product-img'></div>
+                    <a href='/prod-info/'><div className='caps-product-img'></div></a>
                     </div>
                     <div className='caps-product-content'>
                         <div className='product-desc'>
@@ -185,7 +185,7 @@ const Catalog = () => {
 
                 <div className='catalog-product'>
                     <div className='product-img-container'>
-                        <div className='caps-product-img'></div>
+                    <a href='/prod-info/'><div className='caps-product-img'></div></a>
                     </div>
                     <div className='caps-product-content'>
                         <div className='product-desc'>
@@ -198,7 +198,7 @@ const Catalog = () => {
 
                 <div className='catalog-product'>
                     <div className='product-img-container'>
-                        <div className='caps-product-img'></div>
+                    <a href='/prod-info/'><div className='caps-product-img'></div></a>
                     </div>
                     <div className='caps-product-content'>
                         <div className='product-desc'>
@@ -211,7 +211,7 @@ const Catalog = () => {
 
                 <div className='catalog-product'>
                     <div className='product-img-container'>
-                        <div className='caps-product-img'></div>
+                    <a href='/prod-info/'><div className='caps-product-img'></div></a>
                     </div>
                     <div className='caps-product-content'>
                         <div className='product-desc'>
@@ -224,7 +224,7 @@ const Catalog = () => {
 
                 <div className='catalog-product'>
                     <div className='product-img-container'>
-                        <div className='caps-product-img'></div>
+                    <a href='/prod-info/'><div className='caps-product-img'></div></a>
                     </div>
                     <div className='caps-product-content'>
                         <div className='product-desc'>

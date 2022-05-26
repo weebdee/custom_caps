@@ -1,4 +1,5 @@
 import React from "react";
+import Slider from "../main_page/slider";
 
 import './product-c.css'
 
@@ -7,11 +8,11 @@ const ProductInfo = () => {
     return (
         <div className='main-container'>
             <div className='links-container'>
-                <a className='from-page'>HOME</a>
+                <a href='/' className='from-page'>Home</a>
                 <p className='from-page'>&gt;</p>
-                <a className='from-page'>Каталог</a>
+                <a href='/catalog/' className='from-page'>Каталог</a>
                 <p className='from-page'>&gt;</p>
-                <a className='to-page'>Детали Продукта</a>
+                <a href='/prod-info/' className='to-page'>Детали Продукта</a>
             </div>
 
             
@@ -71,34 +72,7 @@ const ProductInfo = () => {
             <div className="slider-tittle">
                 <h1>Похожие товары</h1>
             </div>
-            <div className="slider-container">
-                <div className="imagesList">
-                    <div className="prev">
-                        <img src={require('../main_page/slider/img-slider/Vector.jpg')}/>
-                    </div>
-                    <div className="img_text">
-                        <img src={require('../main_page/slider/img-slider/adidas.jpg')}alt="" />
-                        <h1>Adidas</h1>
-                        <p>San Francisco Baseball</p>
-                        <span className="yellow">3800c</span>
-                    </div>
-                    <div className="img_text">
-                        <img src={require('../main_page/slider/img-slider/new_era.jpg')} alt=""/>
-                        <h1>New Era</h1>
-                        <p>New York Yankies</p>
-                        <span className="yellow">3800c</span>
-                    </div>
-                    <div className="img_text">
-                        <img src={require('../main_page/slider/img-slider/nike.jpg')} alt=""/>
-                        <h1>Nike</h1>
-                        <p>French Fries Series</p>
-                        <span className="yellow">4500c</span>
-                    </div>
-                    <div className="next">
-                        <img src={require('../main_page/slider/img-slider/Vector_2.jpg')} alt=""/>
-                    </div>
-                </div>
-            </div>
+            <Slider />
 
 
 

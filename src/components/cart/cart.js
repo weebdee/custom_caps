@@ -1,14 +1,20 @@
 import React from "react";
 import kepka3 from './cart-img/kepka3.png'
 import './cart-c.css'
+import "./PopUpWindow/PopUpWindow";
+import {useState} from "react";
+import Modal from "./PopUpWindow/PopUpWindow";
+
 
 const Cart = () => {
+    const [openModal, setOpenModal] = useState(false);
+
     return (
         <div className='catalog-container main-container'>
             <div className='links-container'>
-                <a className='from-page'>Home</a>
+                <a href='/' className='from-page'>Home</a>
                 <p className='from-page'>&gt;</p>
-                <a className='to-page'>Корзина</a>
+                <a href='/cart/' className='to-page'>Корзина</a>
             </div>
             <hr className='thick-hr'/>
             <div className='cart'>
@@ -30,7 +36,8 @@ const Cart = () => {
                 <h2>Ваша информация</h2>
                 <input className='inp' type="text" placeholder='Имя'/>
                 <input className='inp' type="text" placeholder='+996 777 888 999'/>
-                <a className='btn yellow-btn cart-btn'>Купить</a>
+                <a className='btn yellow-btn cart-btn' onClick={() => setOpenModal(true)}>Купить</a>
+                {/*dont forget this => */}{openModal && <Modal/>}
             </div>
         </div>
     )

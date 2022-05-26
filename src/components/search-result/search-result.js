@@ -7,7 +7,7 @@ const SearchRes = () => {
     return (
         <div className='result-container main-container'>
             <div className='links-container'>
-                <a className='from-page'>Поиск</a>
+                <a href='/' className='from-page'>Поиск</a>
                 <p className='from-page'>&gt;</p>
                 <a className='to-page'>Adidas</a>
             </div>

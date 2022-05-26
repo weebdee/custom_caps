@@ -1,126 +1,134 @@
-.slider-card-container {
-    padding: 0px 100px 0px;
+.swiper-card img{
+    width: 218px;
 }
-@media (max-width: 1000px) {
-    .slider-card-container {
-        padding: 0px 80px 0px;
+@media(max-width: 1055px) {
+    .swiper-card img{
+        width: 190px;
     }
 }
-.flex-row {
-    margin-right: 30px;
+@media(max-width: 800px) {
+    .swiper-card img{
+        width: 150px;
+    }
 }
-.desc-year {
-    font-weight: 300;
-    font-size: 11px;
-    line-height: 13px;
+@media(max-width: 555px) {
+    .swiper-card img{
+        width: 100px;
+    }
 }
-.text-margin {
-    margin: 12px 20px 0px 38px;
+@media(max-width: 375px) {
+    .swiper-card img{
+        width: 85px;
+    }
 }
-.small-caps-container {
-    display: flex;
-    justify-content:space-between;
-    margin-bottom: 80px;
-}
-.small-c-custom{
-    width: 5750px;
-    height: 320px;
-    border-radius: 50px;
-    background: url(./img-slider/custom-slider.png) no-repeat 0 0;
-}
-.small-c-desc {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 550px;
-    height: 320px;
-    color: #FFFDFD;
-}
-.small-c-desc h3 {
-    font-weight: 700;
-    font-size: 64px;
-    line-height: 78px;
-    text-align: center;
-}
-.small-c-desc p {
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 29px;
-}
-.small-c-exclusive{
-    width: 570px;
-    height: 324.06px;
-    border-radius: 50px;
-    background: url(./img-slider/exclusive-slider.png) no-repeat 0 0;
-}
-.imagesList{
+.swiper-wrapper{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin: 40px 0px 55px 0px;
-
 }
-.img_text {
-    flex: 0 1 auto;
+
+.swiper-card{
+    cursor: pointer;
     display: flex;
     flex-direction: column;
+}
+.sw-card-img{
+    display: block;
+    margin: 0 auto;
+}
+.card-body{
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
-.img_text img {
-    width: 218px;
-    height: 144px;
-    box-sizing: border-box;
-}
-@media (max-width: 850px) {
-    .img_text img {
-        width: 170px;
-        height: 140px;
-        box-sizing: border-box;
-    }
-}
-.img_text h1 {
-    margin-top: 10px;
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
+
+.kepka-brand{
     font-weight: 700;
     font-size: 24px;
-    line-height: 29px;
-    color: #847E7E;
-
+    line-height: 29.26px;
+    color:#847E7E;
 }
-.img_text p {
-    margin: 11px 0;
-    color: #847E7E;
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
+@media(max-width: 1055px) {
+    .kepka-brand{
+        font-size: 20px;
+    }
+}
+@media(max-width: 555px) {
+    .kepka-brand{
+        font-size: 17px;
+    }
+}
+@media(max-width: 375px) {
+    .kepka-brand{
+        font-size: 15px;
+    }
+}
+
+.kepka-model{
     font-weight: 400;
     font-size: 14px;
-    line-height: 17px;
-    letter-spacing: -0.05em;
+    line-height: 17.07px;
+    letter-spacing: -1px;
+    color: #847E7E;
+    margin: 10px 0;
 }
-.yellow {
-    color: #FDDB16;
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
+@media(max-width: 1055px) {
+    .kepka-model{
+        font-size: 13px;
+    }
+}
+@media(max-width: 555px) {
+    .kepka-model{
+        font-size: 10px;
+        margin: 0px;
+    }
+}
+@media(max-width: 375px) {
+    .kepka-model{
+        font-size: 9px;
+        margin: 0px;
+    }
+}
+
+.kepka-price{
     font-weight: 700;
     font-size: 18px;
-    line-height: 22px;
+    line-height: 21.94px;
+    color: #FDDB16;
 }
-.slider-container .prev, .slider-container .next{
-    cursor:pointer;
+@media(max-width: 1055px) {
+    .kepka-price{
+        font-size: 15px;
+    }
 }
-.prev{
-  background:url(./img-slider/Vector.jpg) no-repeat 0 0;
+
+
+.swiper{
+    max-width: 904px;
 }
-.next{
-  background:url(./img-slider/Vector_2.jpg) no-repeat 0 0;
+.swiper-inner{
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  
 }
-.head h1{
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 42px;
+
+.arrow-left, .arrow-right{
+    width: 30px;
+    height: auto;
+    font-size: 50px;
+}
+@media (max-width: 680px) {
+    .arrow-left, .arrow-right{
+        font-size: 30px;
+    }
+}
+@media (max-width: 555px) {
+    .arrow-left, .arrow-right{
+        font-size: 20px;
+    }
+}
+
+.arrow-right{
+    transform: rotate(180deg);
 }

@@ -15,19 +15,20 @@ const Header = () => {
                         <Link className='list-group-a' to='/catalog/'> Каталог </Link>
                     </li>
                     <li className='list-group-a list-group-a-adap'>Кастомные</li>
-                    <li className='list-group-a'>Бренды</li>
-                    <li className='list-group-a'>О нас</li>
+                    <li className='list-group-a'><a className='list-group-a' href='/#brand'>Бренды</a></li>
+                    <li className='list-group-a'><a className='list-group-a' href='/#aboutUs'>О нас</a></li>
                 </ul>
                 
                 <div className='input-container '>
                     <form>
-                        <input type='text' className='search'></input>
-                        <i className="fa-solid fa-magnifying-glass"></i>
+                        <input type='text' placeholder='type to search' className='search'></input>
+                        <a href='/search-res/'><i className="fa-solid fa-magnifying-glass"></i></a>
                     </form>
                 </div>
                 <Link to='/cart/'>
                     <img className='cart-img' src={require('./header-img/shop-cart.png')} alt={'cart-img'}></img>
                 </Link>
+                <i className="fa-solid fa-bars"></i>
             </div>
             <hr/>
         </div>

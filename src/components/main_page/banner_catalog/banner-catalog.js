@@ -18,7 +18,7 @@ const BannerCatalog = () => {
                             <p className="desc-class">Housten Rocket</p>
                             <div className="card-desc-price">2399c</div>
                         </div>
-                        <a href="">
+                        <a href="/prod-info/">
                         <img className="card-img" src={imgCaps} alt=""/>
                         </a>
                     </div>
@@ -31,7 +31,7 @@ const BannerCatalog = () => {
                             <p className="desc-class">Housten Rocket</p>
                             <div className="card-desc-price">2399c</div>
                         </div>
-                        <a href="">
+                        <a href="/prod-info/">
                         <img className="card-img" src={imgCaps} alt=""/>
                         </a>
                     </div>
@@ -44,7 +44,7 @@ const BannerCatalog = () => {
                             <p className="desc-class">Housten Rocket</p>
                             <div className="card-desc-price">2399c</div>
                         </div>
-                        <a href="">
+                        <a href="/prod-info/">
                         <img className="card-img" src={imgCaps} alt=""/>
                         </a>
                     </div>
@@ -57,15 +57,11 @@ const BannerCatalog = () => {
                     Supreme & New Era
                 </h1>
                 <p className='c-minor-desc'>collaboration</p>
-                <Link to='/catalog/'>
-                    <button className="c-desc-btn purple-btn btn">
-                     Открыть каталог 
-                    </button> 
-                    </Link>
+                <a href='/catalog/' className="c-desc-btn purple-btn btn">Открыть каталог</a> 
             </div>
 
             <img className='banner-c-caps' src={imgUrl}></img>
-            <img className='banner-c-circle'></img>
+            <img className='banner-c-caps-adap p-absolute' src={require('./banner-catlg-img/catalog-bg480px.png')}></img>
         </div>
     )
 }
