@@ -3,7 +3,6 @@
     flex-direction: column;
     margin: 60px 0px 80px 0px;
 }
-
 .custom h1 {
     font-weight: 700;
     font-size: 30px;
@@ -58,7 +57,6 @@
         margin-right: 10px;
     }
 }
-
 .number {
     display: flex;
 }

@@ -33,7 +33,6 @@
     height: 173px;
     margin: 32px 16px 10px
 }
-
 .result-content {
     width: 270px;
     height: 84px;
@@ -50,7 +49,6 @@
     padding: 0px 20px 0px;
     color: #847E7E
 }
-
 .result-desc h3{
     font-style: normal;
     font-weight: 700;
@@ -58,7 +56,6 @@
     line-height: 22px;
     margin: 0px;
 }
-
 .result-desc p {
     margin: 0px;
     font-style: normal;

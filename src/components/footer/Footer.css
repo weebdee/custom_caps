@@ -131,8 +131,6 @@
         display: none;
     }
 }
-
-
 .second {
     margin: 40px auto;
 }
@@ -181,12 +179,10 @@
     line-height: 12px;
     color: #000000;
 }
-
 .logo-img-footer {
     width: 53px;
     height: 44px;
 }
-
 .oval{
     width: 35px;
     height: 35px;
