@@ -9,7 +9,7 @@ const SearchRes = () => {
             <div className='links-container'>
                 <a href='/' className='from-page'>Поиск</a>
                 <p className='from-page'>&gt;</p>
-                <a className='to-page'>Adidas</a>
+                <a href='/' className='to-page'>Adidas</a>
             </div>
             <div className='caps-catalog-flex'>
 

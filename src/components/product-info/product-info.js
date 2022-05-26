@@ -21,17 +21,17 @@ const ProductInfo = () => {
             <div className='product-details'>
                 <div className='caps-details-img'>
                     <div className='main-cap-container'>
-                        <img className='main-cap-img' src={require('./images/main-img.png')}/>
+                        <img className='main-cap-img' src={require('./images/main-img.png')} alt='main-c-img'/>
                     </div>
                     <div className='cap-details'>
                         <div className='detail-cap-container'>
-                            <img className='minor-cap-img' src={require('./images/minor-img1.png')}/>
+                            <img className='minor-cap-img' src={require('./images/minor-img1.png')} alt='minor-cap-img'/>
                         </div>
                         <div className='detail-cap-container'>
-                            <img className='minor-cap-img' src={require('./images/minor-img2.png')}/>
+                            <img className='minor-cap-img' src={require('./images/minor-img2.png')} alt='minor-cap-img'/>
                         </div>
                         <div className='detail-cap-container'>
-                            <img className='minor-cap-img' src={require('./images/minor-img3.png')}/>
+                            <img className='minor-cap-img' src={require('./images/minor-img3.png')} alt='minor-cap-img'/>
                         </div>
                     </div>
                 </div>
@@ -61,7 +61,7 @@ const ProductInfo = () => {
                     </div>
 
                     <div className='c-d-price'>3200 сом</div>
-                    <a className='btn yellow-btn c-d-btn'>Добавить в корзину</a>
+                    <button className='btn yellow-btn c-d-btn'>Добавить в корзину</button>
 
                 </div>
                 

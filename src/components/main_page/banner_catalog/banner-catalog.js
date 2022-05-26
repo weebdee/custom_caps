@@ -1,5 +1,4 @@
 import React from "react";
-import {Link} from 'react-router-dom'
 
 import imgCaps from "./banner-catlg-img/painted-caps.png"
 import imgUrl from "./banner-catlg-img/catalog-bg.svg"
@@ -19,7 +18,7 @@ const BannerCatalog = () => {
                             <div className="card-desc-price">2399c</div>
                         </div>
                         <a href="/prod-info/">
-                        <img className="card-img" src={imgCaps} alt=""/>
+                        <img className="card-img" src={imgCaps} alt="caps-img"/>
                         </a>
                     </div>
                 </div>
@@ -45,7 +44,7 @@ const BannerCatalog = () => {
                             <div className="card-desc-price">2399c</div>
                         </div>
                         <a href="/prod-info/">
-                        <img className="card-img" src={imgCaps} alt=""/>
+                        <img className="card-img" src={imgCaps} alt="caps-img"/>
                         </a>
                     </div>
                 </div>
@@ -60,8 +59,8 @@ const BannerCatalog = () => {
                 <a href='/catalog/' className="c-desc-btn purple-btn btn">Открыть каталог</a> 
             </div>
 
-            <img className='banner-c-caps' src={imgUrl}></img>
-            <img className='banner-c-caps-adap p-absolute' src={require('./banner-catlg-img/catalog-bg480px.png')}></img>
+            <img className='banner-c-caps' src={imgUrl} alt='banner-img'></img>
+            <img className='banner-c-caps-adap p-absolute' src={require('./banner-catlg-img/catalog-bg480px.png')} alt='banner-adap-img'></img>
         </div>
     )
 }

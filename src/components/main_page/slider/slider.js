@@ -1,6 +1,5 @@
 import React from 'react';
 import './slider.css'
-import arrow1 from './slider-img/Vector.svg'
 
 import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css'

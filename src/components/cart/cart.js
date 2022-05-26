@@ -18,7 +18,7 @@ const Cart = () => {
             </div>
             <hr className='thick-hr'/>
             <div className='cart'>
-                <img src={kepka3} alt=""/>
+                <img src={kepka3} alt="cap-3"/>
                 <div className='product-count'>
                     <input type="button" value='-'/>
                     <p>1</p>
@@ -36,7 +36,7 @@ const Cart = () => {
                 <h2>Ваша информация</h2>
                 <input className='inp' type="text" placeholder='Имя'/>
                 <input className='inp' type="text" placeholder='+996 777 888 999'/>
-                <a className='btn yellow-btn cart-btn' onClick={() => setOpenModal(true)}>Купить</a>
+                <button className='btn yellow-btn cart-btn' onClick={() => setOpenModal(true)}>Купить</button>
                 {/*dont forget this => */}{openModal && <Modal/>}
             </div>
         </div>

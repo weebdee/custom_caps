@@ -35,7 +35,7 @@
 }
 .card-container {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     margin: 50px 0px;
     padding: 0px 100px;
@@ -58,7 +58,7 @@
         height: 180px;
         margin: 0 auto;
         padding-left: 20px;
-        justify-content: start;
+        justify-content: flex-start;
     }
 }
 .card {
@@ -216,6 +216,7 @@
     font-size: 18px;
     line-height: 22px;
     text-decoration: none;
+    border: none;
 }
 
 @media (max-width: 1000px) {

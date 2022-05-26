@@ -236,12 +236,12 @@ const Catalog = () => {
                 </div>
             </div>
             <div className='catalog-pages'>
-                <a>1</a>
-                <a>2</a>
-                <a>3</a>
-                <a>4</a>
-                <a>5</a>
-                <a>&gt;</a>
+                <a href='/'>1</a>
+                <a href='/'>2</a>
+                <a href='/'>3</a>
+                <a href='/'>4</a>
+                <a href='/'>5</a>
+                <a href='/'>&gt;</a>
             </div>
         </div>
     )

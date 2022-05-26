@@ -4,9 +4,10 @@ import './custom.css';
 const Custom = () => {
     return (
     <div className='custom-card-container'>
-        <a name='brand'/>
-        <div className="card-container card-slider">
         
+        <a href='/#brand' name='brand'/>
+       
+        <div className="card-container card-slider">
             <div className="card flex-row">
                 <div className="card-desc card-slider">
                     <a href="/prod-info/">

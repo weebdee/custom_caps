@@ -12,10 +12,10 @@ const BannerMain = () => {
         <div className='m-b-adaptive-container'>
             <div className="main-banner-container">
                 <span className='p-absolute ellipse-left'/>
-                <img src={kepka2} className='p-absolute cap-left'/>
-                <img src={kepka3} className='p-absolute absolute-right cap-right'/>
-                <span className="p-absolute absolute-right ellipse-right"><img src={ellipse3} alt=""/></span>
-                <img src={kepka1} className='p-absolute cap-center'/>
+                <img src={kepka2} className='p-absolute cap-left' alt='cap-left'/>
+                <img src={kepka3} className='p-absolute absolute-right cap-right' alt='cap-right'/>
+                <span className="p-absolute absolute-right ellipse-right"><img src={ellipse3} alt="ellipse"/></span>
+                <img src={kepka1} className='p-absolute cap-center' alt="ellipse"/>
             </div>
             <div className='banner-main-text'>
                 <div className='banner-main-tittle'>
