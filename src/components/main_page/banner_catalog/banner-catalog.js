@@ -2,10 +2,17 @@ import React from "react";
 
 import imgCaps from "./banner-catlg-img/painted-caps.png"
 import imgUrl from "./banner-catlg-img/catalog-bg.svg"
+import CustomService from "../../../services/custom-service";
 
 import './banner-cat.css'
 
 const BannerCatalog = () => {
+    const service = new CustomService()
+    const test = () => {
+      return service.getAllCaps().then((data) => console.log(data))
+    }
+    console.log(test());
+    
     return (
         <div className='banner-c-container'>
             <div className="card-container flex-column">

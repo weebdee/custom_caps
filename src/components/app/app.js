@@ -31,6 +31,8 @@ function App() {
         }}/>
         <Footer/>
       </Router> 
+
+      console.log(getCap());
     </div>
   );
 }
