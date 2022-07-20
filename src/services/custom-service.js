@@ -17,7 +17,7 @@ export default class CustomService {
     return res.results
   };
 
-  getCaps = async (id) => {
+  getCap = async (id) => {
     const cap = await this.getResource(`/caps/${id}/`);
     return this._transformCap(cap);
   };

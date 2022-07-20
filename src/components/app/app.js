@@ -14,12 +14,9 @@ function App() {
     <div className="app-container">
       <Router> 
         <Header/>
-        <Route path='/' exact={true} render={() => {
-          return <MainPage/>
-        }} />
-        <Route path='/catalog/' render={() => {
-          return <Catalog/>
-        }} />
+        <Route path='/' exact={true} component={MainPage}/>
+        <Route path='/catalog/' 
+        component={Catalog}/>
         <Route path='/prod-info/' render={() => {
           return <ProductInfo/>
         }} />
@@ -32,7 +29,7 @@ function App() {
         <Footer/>
       </Router> 
 
-      console.log(getCap());
+      
     </div>
   );
 }

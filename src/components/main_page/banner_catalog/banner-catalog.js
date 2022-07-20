@@ -12,7 +12,6 @@ const BannerCatalog = () => {
       return service.getAllCaps().then((data) => console.log(data))
     }
     console.log(test());
-    
     return (
         <div className='banner-c-container'>
             <div className="card-container flex-column">

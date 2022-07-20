@@ -1,8 +1,15 @@
-import React from "react";
+import React, {useEffect} from "react";
+import CatalogItem from "../catalog-item";
+import { fetchCaps } from "../../actions";
+import withCapsService from "../hoc";
+import { connect } from "react-redux";
 
 import './catalog.css'
 
-const Catalog = () => {
+const Catalog = ({fetchCaps, caps, loading, error}) => {
+
+    useEffect(() => fetchCaps(), [])
+   
     return (
         <div className='catalog-container'>
             <div className='links-container main-container'>
@@ -16,7 +23,6 @@ const Catalog = () => {
                     <h2>McLAREN</h2>
                 </div>
             </div>
-
             <div className='catalog-sorting'>
                 <select id="sort-product" name="sort">
                     <option value="popular">Популярные</option>
@@ -27,213 +33,20 @@ const Catalog = () => {
             </div>
 
             <div className='caps-catalog-flex main-container'>
-                <div className='catalog-product'>
-                    <div className='product-img-container'>
-                        <a href='/prod-info/'><div className='caps-product-img'></div></a>
-                    </div>
-                    <div className='caps-product-content'>
-                        <div className='product-desc'>
-                            <h3>Nike</h3>
-                            <p>French Fries Series</p>
-                        </div>
-                        <div className='product-desc-price'>3500c</div>
-                    </div>
-                </div>
-
-                <div className='catalog-product'>
-                    <div className='product-img-container'>
-                        <a href='/prod-info/'><div className='caps-product-img'></div></a>
-                    </div>
-                    <div className='caps-product-content'>
-                        <div className='product-desc'>
-                            <h3>Nike</h3>
-                            <p>French Fries Series</p>
-                        </div>
-                        <div className='product-desc-price'>3500c</div>
-                    </div>
-                </div>
-
-                <div className='catalog-product'>
-                    <div className='product-img-container'>
-                        <a href='/prod-info/'><div className='caps-product-img'></div></a>
-                    </div>
-                    <div className='caps-product-content'>
-                        <div className='product-desc'>
-                            <h3>Nike</h3>
-                            <p>French Fries Series</p>
-                        </div>
-                        <div className='product-desc-price'>3500c</div>
-                    </div>
-                </div>
-
-                <div className='catalog-product'>
-                    <div className='product-img-container'>
-                        <a href='/prod-info/'><div className='caps-product-img'></div></a>
-                    </div>
-                    <div className='caps-product-content'>
-                        <div className='product-desc'>
-                            <h3>Nike</h3>
-                            <p>French Fries Series</p>
-                        </div>
-                        <div className='product-desc-price'>3500c</div>
-                    </div>
-                </div>
-
-                <div className='catalog-product'>
-                    <div className='product-img-container'>
-                        <a href='/prod-info/'><div className='caps-product-img'></div></a>
-                    </div>
-                    <div className='caps-product-content'>
-                        <div className='product-desc'>
-                            <h3>Nike</h3>
-                            <p>French Fries Series</p>
-                        </div>
-                        <div className='product-desc-price'>3500c</div>
-                    </div>
-                </div>
-
-                <div className='catalog-product'>
-                    <div className='product-img-container'>
-                    <a href='/prod-info/'><div className='caps-product-img'></div></a>
-                    </div>
-                    <div className='caps-product-content'>
-                        <div className='product-desc'>
-                            <h3>Nike</h3>
-                            <p>French Fries Series</p>
-                        </div>
-                        <div className='product-desc-price'>3500c</div>
-                    </div>
-                </div>
-
-                <div className='catalog-product'>
-                    <div className='product-img-container'>
-                        <a href='/prod-info/'><div className='caps-product-img'></div></a>
-                    </div>
-                    <div className='caps-product-content'>
-                        <div className='product-desc'>
-                            <h3>Nike</h3>
-                            <p>French Fries Series</p>
-                        </div>
-                        <div className='product-desc-price'>3500c</div>
-                    </div>
-                </div>
-
-                <div className='catalog-product'>
-                    <div className='product-img-container'>
-                        <a href='/prod-info/'><div className='caps-product-img'></div></a>
-                    </div>
-                    <div className='caps-product-content'>
-                        <div className='product-desc'>
-                            <h3>Nike</h3>
-                            <p>French Fries Series</p>
-                        </div>
-                        <div className='product-desc-price'>3500c</div>
-                    </div>
-                </div>
-
-                <div className='catalog-product'>
-                    <div className='product-img-container'>
-                        <a href='/prod-info/'><div className='caps-product-img'></div></a>
-                    </div>
-                    <div className='caps-product-content'>
-                        <div className='product-desc'>
-                            <h3>Nike</h3>
-                            <p>French Fries Series</p>
-                        </div>
-                        <div className='product-desc-price'>3500c</div>
-                    </div>
-                </div>
-
-                <div className='catalog-product'>
-                    <div className='product-img-container'>
-                    <a href='/prod-info/'><div className='caps-product-img'></div></a>
-                    </div>
-                    <div className='caps-product-content'>
-                        <div className='product-desc'>
-                            <h3>Nike</h3>
-                            <p>French Fries Series</p>
-                        </div>
-                        <div className='product-desc-price'>3500c</div>
-                    </div>
-                </div>
-
-                <div className='catalog-product'>
-                    <div className='product-img-container'>
-                    <a href='/prod-info/'><div className='caps-product-img'></div></a>
-                    </div>
-                    <div className='caps-product-content'>
-                        <div className='product-desc'>
-                            <h3>Nike</h3>
-                            <p>French Fries Series</p>
-                        </div>
-                        <div className='product-desc-price'>3500c</div>
-                    </div>
-                </div>
-
-                <div className='catalog-product'>
-                    <div className='product-img-container'>
-                    <a href='/prod-info/'><div className='caps-product-img'></div></a>
-                    </div>
-                    <div className='caps-product-content'>
-                        <div className='product-desc'>
-                            <h3>Nike</h3>
-                            <p>French Fries Series</p>
-                        </div>
-                        <div className='product-desc-price'>3500c</div>
-                    </div>
-                </div>
-
-                <div className='catalog-product'>
-                    <div className='product-img-container'>
-                    <a href='/prod-info/'><div className='caps-product-img'></div></a>
-                    </div>
-                    <div className='caps-product-content'>
-                        <div className='product-desc'>
-                            <h3>Nike</h3>
-                            <p>French Fries Series</p>
-                        </div>
-                        <div className='product-desc-price'>3500c</div>
-                    </div>
-                </div>
-
-                <div className='catalog-product'>
-                    <div className='product-img-container'>
-                    <a href='/prod-info/'><div className='caps-product-img'></div></a>
-                    </div>
-                    <div className='caps-product-content'>
-                        <div className='product-desc'>
-                            <h3>Nike</h3>
-                            <p>French Fries Series</p>
-                        </div>
-                        <div className='product-desc-price'>3500c</div>
-                    </div>
-                </div>
-
-                <div className='catalog-product'>
-                    <div className='product-img-container'>
-                    <a href='/prod-info/'><div className='caps-product-img'></div></a>
-                    </div>
-                    <div className='caps-product-content'>
-                        <div className='product-desc'>
-                            <h3>Nike</h3>
-                            <p>French Fries Series</p>
-                        </div>
-                        <div className='product-desc-price'>3500c</div>
-                    </div>
-                </div>
-
-                <div className='catalog-product'>
-                    <div className='product-img-container'>
-                    <a href='/prod-info/'><div className='caps-product-img'></div></a>
-                    </div>
-                    <div className='caps-product-content'>
-                        <div className='product-desc'>
-                            <h3>Nike</h3>
-                            <p>French Fries Series</p>
-                        </div>
-                        <div className='product-desc-price'>3500c</div>
-                    </div>
-                </div>
+                {caps.map((cap) => {
+                    if (loading) {
+                        return (
+                            <h6> Loading ... </h6>
+                        )   
+                    }
+                    if (error) {
+                        return (
+                            <h6> Error ... </h6>
+                        )   
+                    }
+                    return (
+                    <div key={cap.id}><CatalogItem cap={cap}/></div>
+                )})}
             </div>
             <div className='catalog-pages'>
                 <a href='/'>1</a>
@@ -247,4 +60,10 @@ const Catalog = () => {
     )
 }
 
-export default Catalog;
+const mapStateToProps = (state) => {return state}
+
+const mapDispatchToProps = (dispatch, ownProps) => {
+    return {fetchCaps: () => fetchCaps(dispatch, ownProps.capsService)}
+}
+
+export default withCapsService(connect(mapStateToProps, mapDispatchToProps)(Catalog));

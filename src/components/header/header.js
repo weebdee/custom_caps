@@ -7,9 +7,9 @@ const Header = () => {
     return (
         <div className='header-container'>
             <div className='d-flex header-in'>
-                <a href='/'>
+                <Link to='/'>
                     <img className='logo-img-header' src={require('./header-img/logo.png')} alt={'logo-img'} ></img>
-                </a>
+                </Link>
                 <ul className="list-container d-flex">
                     <li className='list-group-a'>
                         <Link className='list-group-a' to='/catalog/'> Каталог </Link>
