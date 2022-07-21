@@ -4,7 +4,6 @@ const acsendingOrder = (state) => {
     const item = state.caps 
     const acsendingChange = state.acsending
     console.log(val);
-    console.log(item);
     if (val === 'cheap-first') {
         const newOrder =  item.sort((a, b) => a.price - b.price);
         return {

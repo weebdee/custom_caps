@@ -8,7 +8,6 @@ import './catalog.css'
 
 const Catalog = ({fetchCaps, loading, error, capsAcsending, caps}) => {
     useEffect(() => fetchCaps() ,[])
-    console.log(caps);
     
     
     return (
@@ -38,12 +37,12 @@ const Catalog = ({fetchCaps, loading, error, capsAcsending, caps}) => {
                    caps.map((cap) => {
                     if (loading) {
                         return (
-                            <h6 key ={cap.id + 12}> Loading ... </h6>
+                            <h6 key ={cap.id + 1}> Loading ... </h6>
                         )   
                     }
                     if (error) {
                         return (
-                            <h6 key ={cap.id + 9}> Error ... </h6>
+                            <h6 key ={cap.id + 2}> Error ... </h6>
 
 
                         )   
@@ -55,14 +54,6 @@ const Catalog = ({fetchCaps, loading, error, capsAcsending, caps}) => {
                     
 
                 }
-            </div>
-            <div className='catalog-pages'>
-                <a href='/'>1</a>
-                <a href='/'>2</a>
-                <a href='/'>3</a>
-                <a href='/'>4</a>
-                <a href='/'>5</a>
-                <a href='/'>&gt;</a>
             </div>
         </div>
     )
