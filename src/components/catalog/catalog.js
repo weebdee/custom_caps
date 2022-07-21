@@ -25,7 +25,7 @@ const Catalog = ({fetchCaps, caps, loading, error}) => {
             </div>
             <div className='catalog-sorting'>
                 <select id="sort-product" name="sort">
-                    <option value="popular">Популярные</option>
+                    <option  value="popular">Популярные</option>
                     <option value="cheap first">Сначала дешевые</option>
                     <option value="expensive first">Сначала дорогие</option>
                     <option value="new">Новинки</option>

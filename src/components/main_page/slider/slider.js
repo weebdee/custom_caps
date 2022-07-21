@@ -6,7 +6,9 @@ import 'swiper/css'
 import {Navigation} from "swiper";
 import 'swiper/css/navigation';
 
+
 const NavLink = () => {
+
     return (
         <div className='swiper-card'>
             <a href='/prod-info/'><img className='sw-card-img' src={require('./slider-img/kepka1.png')}
@@ -50,4 +52,5 @@ const Slider = () => {
     );
 };
 
-export default Slider;
+
+export default Slider

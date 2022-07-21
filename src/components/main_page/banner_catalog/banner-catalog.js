@@ -7,11 +7,6 @@ import CustomService from "../../../services/custom-service";
 import './banner-cat.css'
 
 const BannerCatalog = () => {
-    const service = new CustomService()
-    const test = () => {
-      return service.getAllCaps().then((data) => console.log(data))
-    }
-    console.log(test());
     return (
         <div className='banner-c-container'>
             <div className="card-container flex-column">

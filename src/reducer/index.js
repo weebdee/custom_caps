@@ -2,6 +2,24 @@ const defaultState = {
     caps: [],
     loading: false,
     error: false,
+    cartItems: [
+        {
+        itemPic: 1,
+        amount: 2,
+        size: 'l',
+        brandName: 'blahblah',
+        capName: 'saveuslord',
+        price: '3200',
+        },
+        {
+            itemPic: 1,
+            amount: 2,
+            size: 'l',
+            brandName: 'blahblah',
+            capName: 'saveuslord',
+            price: '3200',
+            }
+    ]
 }
 
 
