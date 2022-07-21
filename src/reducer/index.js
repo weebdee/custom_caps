@@ -1,3 +1,45 @@
+const acsendingOrder = (state) => {
+    const selectBox = document.getElementById("sort-product");
+    var val = selectBox.options[selectBox.selectedIndex].value;
+    const item = state.caps 
+    const acsendingChange = state.acsending
+    console.log(val);
+    console.log(item);
+    if (val === 'cheap-first') {
+        const newOrder =  item.sort((a, b) => a.price - b.price);
+        return {
+        ...state,
+        caps: newOrder,
+        acsending: !acsendingChange
+    }} 
+    if (val === 'expensive-first'){
+        const newOrder =  item.sort((a, b) => (a.price > b.price) ? -1 : 1);
+        console.log(newOrder);
+        return {
+            ...state,
+            caps: newOrder,
+            acsending: !acsendingChange
+        }
+    }
+    if (val === 'new'){
+        const newOrder = item.sort((a,b) => new Date(b.created_data) - new Date(a.created_data))
+        console.log(newOrder);
+        return {
+            ...state,
+            caps: newOrder,
+            acsending: !acsendingChange
+        }
+    }
+    if (val === 'popular'){
+        const newOrder =  item.sort((a, b) => a.id - b.id);
+        return {
+            ...state,
+            caps: newOrder,
+            acsending: !acsendingChange
+        }
+    }
+}
+
 const defaultState = {
     caps: [],
     loading: false,
@@ -6,7 +48,7 @@ const defaultState = {
         {
         itemPic: 1,
         amount: 2,
-        size: 'l',
+        size: 'L',
         brandName: 'blahblah',
         capName: 'saveuslord',
         price: '3200',
@@ -14,12 +56,13 @@ const defaultState = {
         {
             itemPic: 1,
             amount: 2,
-            size: 'l',
+            size: 'S',
             brandName: 'blahblah',
             capName: 'saveuslord',
             price: '3200',
-            }
-    ]
+        }
+    ],
+    acsending: false
 }
 
 
@@ -45,9 +88,13 @@ const reducer = (state=defaultState, action) => {
                 error: true,
                 loading: false,
             };
+        case 'CAPS_ACSENDING':
+            return acsendingOrder(state)
         default:
             return state;
     }
 }
+
+
 
 export default reducer

@@ -1,15 +1,16 @@
 import React, {useEffect} from "react";
 import CatalogItem from "../catalog-item";
-import { fetchCaps } from "../../actions";
+import { fetchCaps, capsAcsending } from "../../actions";
 import withCapsService from "../hoc";
 import { connect } from "react-redux";
 
 import './catalog.css'
 
-const Catalog = ({fetchCaps, caps, loading, error}) => {
-
-    useEffect(() => fetchCaps(), [])
-   
+const Catalog = ({fetchCaps, loading, error, capsAcsending, caps}) => {
+    useEffect(() => fetchCaps() ,[])
+    console.log(caps);
+    
+    
     return (
         <div className='catalog-container'>
             <div className='links-container main-container'>
@@ -24,29 +25,36 @@ const Catalog = ({fetchCaps, caps, loading, error}) => {
                 </div>
             </div>
             <div className='catalog-sorting'>
-                <select id="sort-product" name="sort">
-                    <option  value="popular">Популярные</option>
-                    <option value="cheap first">Сначала дешевые</option>
-                    <option value="expensive first">Сначала дорогие</option>
+                <select onChange={capsAcsending} id="sort-product" name="sort">
+                    <option value="popular">Популярные</option>
+                    <option value="cheap-first">Сначала дешевые</option>
+                    <option value="expensive-first">Сначала дорогие</option>
                     <option value="new">Новинки</option>
                 </select>
             </div>
 
             <div className='caps-catalog-flex main-container'>
-                {caps.map((cap) => {
+                {
+                   caps.map((cap) => {
                     if (loading) {
                         return (
-                            <h6> Loading ... </h6>
+                            <h6 key ={cap.id + 12}> Loading ... </h6>
                         )   
                     }
                     if (error) {
                         return (
-                            <h6> Error ... </h6>
+                            <h6 key ={cap.id + 9}> Error ... </h6>
+
+
                         )   
-                    }
+                    };
                     return (
                     <div key={cap.id}><CatalogItem cap={cap}/></div>
-                )})}
+
+                )})
+                    
+
+                }
             </div>
             <div className='catalog-pages'>
                 <a href='/'>1</a>
@@ -63,7 +71,8 @@ const Catalog = ({fetchCaps, caps, loading, error}) => {
 const mapStateToProps = (state) => {return state}
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-    return {fetchCaps: () => fetchCaps(dispatch, ownProps.capsService)}
+    return {fetchCaps: () => fetchCaps(dispatch, ownProps.capsService),
+        capsAcsending: () => dispatch(capsAcsending())}
 }
 
 export default withCapsService(connect(mapStateToProps, mapDispatchToProps)(Catalog));
