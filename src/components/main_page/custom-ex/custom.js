@@ -1,55 +1,41 @@
-import React from "react";
+import React, { useEffect }  from "react";
 import './custom.css';
 
-const Custom = () => {
+import withCapsService from "../../hoc";
+import { fetchStickers } from "../../../actions";
+import { connect } from "react-redux";
+
+const Custom = ({fetchStickers, caps}) => {
+    useEffect(() => fetchStickers(), [])
+    
+    console.log(caps);
+
     return (
     <div className='custom-card-container'>
         
         <a href='/#brand' name='brand'/>
        
         <div className="card-container card-slider">
-            <div className="card flex-row">
-                <div className="card-desc card-slider">
-                    <a href="/prod-info/">
-                    <img className="card-img" src={require('./custom-img/adidas.jpg')} alt=""/>
-                    </a>
-                    <div className="card-text-desc">
-                        <p className="desc-year">2021</p>
-                        <p className="desc-tittle">New Era</p>
-                        <p className="desc-class">Housten Rocket</p>
-                        <div className="text-margin card-desc-price">2399c</div>
-                    </div>
-                </div>
-            </div>
-
-            <div className="card flex-row">
-                <div className="card-desc card-slider">
-                    <a href="/prod-info/">
-                    <img className="card-img" src={require('./custom-img/adidas.jpg')} alt=""/>
-                    </a>
-                    <div className="card-text-desc">
-                        <p className="desc-year">2021</p>
-                        <p className="desc-tittle">New Era</p>
-                        <p className="desc-class">Housten Rocket</p>
-                        <div className="text-margin card-desc-price">2399c</div>
-                    </div>
-                </div>
-            </div>
-        
-            <div className="card">
-                <div className="card-desc card-slider">
-                    <a href="/prod-info/">
-                    <img className="card-img" src={require('./custom-img/adidas.jpg')} alt=""/>
-                    </a>
-                    <div className="card-text-desc">
-                        <p className="desc-year">2021</p>
-                        <p className="desc-tittle">New Era</p>
-                        <p className="desc-class">Housten Rocket</p>
-                        <div className="text-margin card-desc-price">2399c</div>
-                    </div>
-                </div>
-            </div>
-            
+            {
+                caps.map((data) => {
+                    const stickerLink = `/prod-info/${data.id}` 
+                    return (
+                        <div className="card flex-row">
+                            <div className="card-desc card-slider">
+                                <a href={stickerLink}>
+                                <img className="card-img" src={require('./custom-img/adidas.jpg')} alt=""/>
+                                </a>
+                                <div className="card-text-desc">
+                                    <p className="desc-year">2022</p>
+                                    <p className="desc-tittle">{data.brand.name}</p>
+                                    <p className="desc-class">{data.name}</p>
+                                    <div className="text-margin card-desc-price">{data.price}c</div>
+                                </div>
+                            </div>
+                        </div>
+                    )
+                })
+            }
         </div>
 
         <div className='small-caps-container main-container'>
@@ -70,4 +56,9 @@ const Custom = () => {
     )
 }
 
-export default Custom;
+const mapStateToProps = (state) => {return state}
+const mapDispatchToProps = (dispatch, ownProps) => {
+    return {fetchStickers: () => fetchStickers(dispatch, ownProps.capsService)}
+}
+
+export default withCapsService(connect(mapStateToProps,mapDispatchToProps)(Custom));

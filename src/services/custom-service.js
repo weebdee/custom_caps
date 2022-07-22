@@ -22,6 +22,11 @@ export default class CustomService {
     return this._transformCap(cap);
   };
 
+  getStickerCaps = async () => {
+    const res = await this.getResource(`/caps/`);
+    return res.results.slice(6, 9);
+  }
+
   _transformCap = (cap) => {
     return {
       id: cap.id,
