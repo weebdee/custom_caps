@@ -1,9 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {Link} from 'react-router-dom'
+import withCapsService from "../hoc";
 
 import './header.css';
 
-const Header = () => {
+const Header = ({capsService}) => {
+    const [searchValue, setSearchValue] = useState('')
+    const [capsName, setCapsName] = useState([])
+
+    const getCapsName = () => {
+        return capsService.getAllCaps()
+            .then((data) =>
+                setCapsName(data)
+            )
+    }
+    useEffect(() => {
+        getCapsName()
+    }, [])
+
+    const onSearchChange = (e) => {
+        setSearchValue(e.target.value)
+    }
+
+    const filteredCaps = capsName.filter(caps => {
+        return caps.name.toLowerCase().includes(searchValue.toLowerCase())
+    })
+    console.log(filteredCaps)
     return (
         <div className='header-container'>
             <div className='d-flex header-in'>
@@ -20,10 +42,27 @@ const Header = () => {
                 </ul>
                 
                 <div className='input-container '>
-                    <form>
-                        <input type='text' placeholder='type to search' className='search'></input>
+                <form className="search-form">
+                        <input
+                            type='text'
+                            onChange={onSearchChange}
+                            placeholder='type to search'
+                            className='search' />
+                        <ul className="search-autocomplete">
+                            {
+                                searchValue
+                                    ? filteredCaps.map((capsName, index) => {
+                                        return (
+                                            <li
+                                                className="search-item">
+                                                {capsName.name}
+                                            </li>
+                                        )
+                                    }) : null
+                            }
+                        </ul>
                         <a href='/search-res/'><i className="fa-solid fa-magnifying-glass"></i></a>
-                    </form>
+                </form>
                 </div>
                 <Link to='/cart/'>
                     <img className='cart-img' src={require('./header-img/shop-cart.png')} alt={'cart-img'}></img>
@@ -35,4 +74,4 @@ const Header = () => {
     );
 };
 
-export default Header;
+export default withCapsService(Header);
