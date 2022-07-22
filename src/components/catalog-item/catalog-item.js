@@ -2,12 +2,12 @@ import React from "react";
 import './catalog-item.css'
 
 const CatalogItem = ({ cap }) => {
-    const { brand, name, price, capsimage } = cap
-
+    const { brand, name, price, capsimage, id } = cap
+    const newLink = `/prod-info/${cap.id}`
     return (
         <div className='catalog-product'>
             <div className='product-img-container'>
-                <a href='/prod-info/'><img src={capsimage.photo} className='caps-product-img' alt='prod-img'/></a>
+                <a href={newLink}><img src={capsimage.photo} className='caps-product-img' alt='prod-img'/></a>
             </div>
             <div className='caps-product-content'>
                 <div className='product-desc'>
