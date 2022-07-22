@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Slider from "../main_page/slider";
+import { connect } from "react-redux";
+import { fetchCap } from "../../actions";
+import withCapsService from "../hoc";
 
 import './product-c.css'
 
 
-const ProductInfo = () => {
+const ProductInfo = ({selectedItemId, fetchCap, caps}) => {
+    useEffect (() => fetchCap(selectedItemId), [])
+    const mapSizes = caps.size
     return (
         <div className='main-container'>
             <div className='links-container'>
@@ -41,10 +46,12 @@ const ProductInfo = () => {
                 <div className='caps-details-info'>
                     
                     <div className='c-d-sizes'>
-                        <input className='cart-inp-c' type="button" value='S'/>
-                        <input className='cart-inp-c' type="button" value='M'/>
-                        <input className='cart-inp-c' type="button" value='L'/>
-                        <input className='cart-inp-c' type="button" value='XL'/>
+                        {
+                            mapSizes?.map((val) => {
+                            return (
+                            <input key={val.value} className='cart-inp-c' type="button" value={val.value}/>)
+                            })
+                        }
                     </div>
                     <div className='product-count p-c-top'>
                         <input type="button" value='-'/>
@@ -56,11 +63,11 @@ const ProductInfo = () => {
 
                 <div className='details-box'>
                     <div className='c-d-tittle'>
-                        <h3>New Era</h3>
-                        <p>black snapback 59 fifty</p>
+                        <h3>{caps.brand}</h3>
+                        <p>{caps.name}</p>
                     </div>
 
-                    <div className='c-d-price'>3200 сом</div>
+                    <div className='c-d-price'>{caps.price}сом</div>
                     <button className='btn yellow-btn c-d-btn'>Добавить в корзину</button>
 
                 </div>
@@ -80,4 +87,12 @@ const ProductInfo = () => {
     )
 }
 
-export default ProductInfo;
+const mapStateToProps = (state) => {return state}
+
+const mapDispatchToProps = (dispatch, ownProps) => {
+    return {fetchCap: (selectedItemId) => fetchCap(dispatch, ownProps.capsService, selectedItemId)}
+}
+
+
+
+export default withCapsService(connect(mapStateToProps,mapDispatchToProps)(ProductInfo));

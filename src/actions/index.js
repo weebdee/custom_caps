@@ -24,5 +24,15 @@ const fetchCaps = (dispatch, capsService) => {
     })
 }
 
+const fetchCap = (dispatch, capsService, selectedItemId) => {
+    dispatch(capsRequested())
+            capsService.getCap(selectedItemId).then(cap => {
+           dispatch(capsLoaded(cap))
+           console.log(cap);
+        }).catch(err => {
+            dispatch(capsError())
+    })
+}
 
-export {fetchCaps, capsAcsending}
+
+export {fetchCaps, capsAcsending, fetchCap}

@@ -17,8 +17,9 @@ function App() {
         <Route path='/' exact={true} component={MainPage}/>
         <Route path='/catalog/' 
         component={Catalog}/>
-        <Route path='/prod-info/' render={() => {
-          return <ProductInfo/>
+        <Route path='/prod-info/:id?' render={({match}) => {
+          const selectedItemId = match.params.id 
+          return <ProductInfo selectedItemId={selectedItemId}/>
         }} />
         <Route path='/search-res/' render={() => {
           return <SearchRes />

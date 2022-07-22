@@ -24,17 +24,14 @@ export default class CustomService {
 
   _transformCap = (cap) => {
     return {
-      id: this._extractId(cap),
+      id: cap.id,
+      brand: cap.brand.name,
       name: cap.name,
       price: cap.price,
-      description: cap.description
+      size: cap.size
     }
   };
 
-  _extractId = (item) => {
-    const idRegExp = /\/([0-9]*)\/$/;
-    return item.url.match(idRegExp)[1];
-  };
 
 }
 
