@@ -7,9 +7,6 @@ import { connect } from "react-redux";
 
 const Custom = ({fetchStickers, caps}) => {
     useEffect(() => fetchStickers(), [])
-    
-    console.log(caps);
-
     return (
     <div className='custom-card-container'>
         
@@ -17,10 +14,10 @@ const Custom = ({fetchStickers, caps}) => {
        
         <div className="card-container card-slider">
             {
-                caps.map((data) => {
+                caps.slice(6, 9).map((data) => {
                     const stickerLink = `/prod-info/${data.id}` 
                     return (
-                        <div className="card flex-row">
+                        <div key={data.id} className="card flex-row">
                             <div className="card-desc card-slider">
                                 <a href={stickerLink}>
                                 <img className="card-img" src={require('./custom-img/adidas.jpg')} alt=""/>

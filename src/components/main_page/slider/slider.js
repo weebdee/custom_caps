@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './slider.css'
 
 import {Swiper, SwiperSlide} from 'swiper/react';
@@ -6,24 +6,12 @@ import 'swiper/css'
 import {Navigation} from "swiper";
 import 'swiper/css/navigation';
 
+import { connect } from 'react-redux';
+import withCapsService from '../../hoc';
+import { fetchStickers } from '../../../actions';
 
-const NavLink = () => {
-
-    return (
-        <div className='swiper-card'>
-            <a href='/prod-info/'><img className='sw-card-img' src={require('./slider-img/kepka1.png')}
-                 alt=""/></a>
-            <div className="card-body">
-                <div className='kepka-brand'>Adidas</div>
-                <div className='kepka-model'>San Francisco Baseball</div>
-                <div className="kepka-price">3800c</div>
-            </div>
-        </div>
-        
-    )
-}
-
-const Slider = () => {
+const Slider = ({fetchStickers, caps}) => {
+    useEffect(() => fetchStickers(),[])
     return (
             <div className="swiper-inner main-container">
                 <i className='arrow-left fa-solid fa-angle-left' alt="arrow-left"></i>
@@ -34,23 +22,37 @@ const Slider = () => {
                     navigation={{
                         prevEl: '.arrow-left',
                         nextEl: '.arrow-right'
-                    }}
-                >
-                    <SwiperSlide className='swiper-slide'>{NavLink}</SwiperSlide>
-                    <SwiperSlide>{NavLink}</SwiperSlide>
-                    <SwiperSlide>{NavLink}</SwiperSlide>
-                    <SwiperSlide>{NavLink}</SwiperSlide>
-                    <SwiperSlide>{NavLink}</SwiperSlide>
-                    <SwiperSlide>{NavLink}</SwiperSlide>
-                    <SwiperSlide>{NavLink}</SwiperSlide>
-                    <SwiperSlide>{NavLink}</SwiperSlide>
-                    <SwiperSlide>{NavLink}</SwiperSlide>
+                    }}>
+                    {
+                        caps.map((data) => {
+                            const sliderLink = `/prod-info/${data.id}` 
+                            return (
+                                <SwiperSlide key={data.id}>
+                                    {
+                                        <div className='swiper-card'>
+                                            <a href={sliderLink}><img className='sw-card-img' src={require('./slider-img/kepka1.png')}
+                                                alt="slider-cap"/></a>
+                                            <div className="card-body">
+                                                <div className='kepka-brand'>{data.brand.name}</div>
+                                                <div className='kepka-model'>{data.name}</div>
+                                                <div className="kepka-price">{data.price}c</div>
+                                            </div>
+                                        </div>
+                                    }
+                                </SwiperSlide>
+                            )
+                        })
+                    }
                 </Swiper>
                 <i className='arrow-right fa-solid fa-angle-left' alt="arrow-right"/>
             </div>
         
     );
 };
+const mapStateToProps = (state) => {return state}
+const mapDispatchToProps = (dispatch, ownProps) => {
+    return {fetchStickers: () => fetchStickers(dispatch, ownProps.capsService)}
+}
 
 
-export default Slider
+export default  withCapsService(connect(mapStateToProps,mapDispatchToProps)(Slider))

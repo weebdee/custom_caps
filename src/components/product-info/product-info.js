@@ -7,9 +7,10 @@ import withCapsService from "../hoc";
 import './product-c.css'
 
 
-const ProductInfo = ({selectedItemId, fetchCap, caps}) => {
+const ProductInfo = ({selectedItemId, fetchCap, cap}) => {
     useEffect (() => fetchCap(selectedItemId), [])
-    const mapSizes = caps.size
+    const mapSizes = cap.size
+
     return (
         <div className='main-container'>
             <div className='links-container'>
@@ -63,11 +64,11 @@ const ProductInfo = ({selectedItemId, fetchCap, caps}) => {
 
                 <div className='details-box'>
                     <div className='c-d-tittle'>
-                        <h3>{caps.brand}</h3>
-                        <p>{caps.name}</p>
+                        <h3>{cap.brand}</h3>
+                        <p>{cap.name}</p>
                     </div>
 
-                    <div className='c-d-price'>{caps.price}сом</div>
+                    <div className='c-d-price'>{cap.price}сом</div>
                     <button className='btn yellow-btn c-d-btn'>Добавить в корзину</button>
 
                 </div>

@@ -25,7 +25,6 @@ const Header = ({capsService}) => {
     const filteredCaps = capsName.filter(caps => {
         return caps.name.toLowerCase().includes(searchValue.toLowerCase())
     })
-    console.log(filteredCaps)
     return (
         <div className='header-container'>
             <div className='d-flex header-in'>

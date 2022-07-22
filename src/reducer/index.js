@@ -3,7 +3,6 @@ const acsendingOrder = (state) => {
     var val = selectBox.options[selectBox.selectedIndex].value;
     const item = state.caps 
     const acsendingChange = state.acsending
-    console.log(val);
     if (val === 'cheap-first') {
         const newOrder =  item.sort((a, b) => a.price - b.price);
         return {
@@ -13,7 +12,6 @@ const acsendingOrder = (state) => {
     }} 
     if (val === 'expensive-first'){
         const newOrder =  item.sort((a, b) => (a.price > b.price) ? -1 : 1);
-        console.log(newOrder);
         return {
             ...state,
             caps: newOrder,
@@ -22,7 +20,6 @@ const acsendingOrder = (state) => {
     }
     if (val === 'new'){
         const newOrder = item.sort((a,b) => new Date(b.created_data) - new Date(a.created_data))
-        console.log(newOrder);
         return {
             ...state,
             caps: newOrder,
@@ -61,7 +58,8 @@ const defaultState = {
             price: '3200',
         }
     ],
-    acsending: false
+    acsending: false,
+    cap: []
 }
 
 
@@ -77,6 +75,13 @@ const reducer = (state=defaultState, action) => {
             return {
                 ...state,
                 caps: action.payload,
+                error: false,
+                loading: false,
+            };
+        case 'CAP_LOADED':
+            return {
+                ...state,
+                cap: action.payload,
                 error: false,
                 loading: false,
             };

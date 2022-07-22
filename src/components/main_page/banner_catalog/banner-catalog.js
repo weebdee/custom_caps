@@ -11,15 +11,13 @@ import './banner-cat.css'
 
 const BannerCatalog = ({fetchStickers, caps}) => {
     useEffect(() => fetchStickers(), [])
-    
-    console.log(caps);
 
     return (
         <div className='banner-c-container'>
             <div className="card-container flex-column">
                 
                 {
-                    caps.map((data) => {
+                    caps.slice(6, 9).map((data) => {
                         const stickerLink = `/prod-info/${data.id}`
                         return (
                             <div key={data.id} className="card card-adaptive">

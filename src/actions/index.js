@@ -7,6 +7,11 @@ const capsLoaded = (caps) => ({
     payload: caps,
 }) 
 
+const capLoaded = (cap) => ({
+    type: 'CAP_LOADED',
+    payload: cap,
+}) 
+
 const capsError = () => ({
     type: 'CAPS_ERROR'
 })
@@ -27,8 +32,7 @@ const fetchCaps = (dispatch, capsService) => {
 const fetchCap = (dispatch, capsService, selectedItemId) => {
     dispatch(capsRequested())
             capsService.getCap(selectedItemId).then(cap => {
-           dispatch(capsLoaded(cap))
-           console.log(cap);
+           dispatch(capLoaded(cap))
         }).catch(err => {
             dispatch(capsError())
     })
@@ -38,7 +42,6 @@ const fetchStickers = (dispatch, capsService) => {
     dispatch(capsRequested())
             capsService.getStickerCaps().then(caps => {
            dispatch(capsLoaded(caps))
-           console.log(caps);
         }).catch(err => {
             dispatch(capsError())
     })

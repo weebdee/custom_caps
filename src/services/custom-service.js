@@ -24,7 +24,7 @@ export default class CustomService {
 
   getStickerCaps = async () => {
     const res = await this.getResource(`/caps/`);
-    return res.results.slice(6, 9);
+    return res.results.slice(0, 9);
   }
 
   _transformCap = (cap) => {
