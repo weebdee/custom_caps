@@ -18,7 +18,7 @@ const ProductInfo = ({selectedItemId, fetchCap, cap}) => {
                 <p className='from-page'>&gt;</p>
                 <a href='/catalog/' className='from-page'>Каталог</a>
                 <p className='from-page'>&gt;</p>
-                <a href='/prod-info/' className='to-page'>Детали Продукта</a>
+                <p className='to-page'>Детали Продукта</p>
             </div>
 
             
