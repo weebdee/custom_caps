@@ -6,6 +6,7 @@ import kepka1 from './main-b-img/kepka1.png'
 import kepka2 from './main-b-img/kepka2.png'
 import kepka3 from './main-b-img/kepka3.png'
 import ellipse3 from './main-b-img/Ellipse_5.svg'
+import { Link } from "react-router-dom";
 
 const BannerMain = () => {
     return (
@@ -28,7 +29,7 @@ const BannerMain = () => {
                 <p className='b-m-adap-text'>
                     Новая коллекция 2021 уже доступны на заказ яркие цвета...
                 </p>
-                <a href='/catalog/' className='c-desc-btn btn yellow-btn'>Открыть каталог</a>
+                <Link to='/catalog/' className='c-desc-btn btn yellow-btn'>Открыть каталог</Link>
             </div>
         </div>
         

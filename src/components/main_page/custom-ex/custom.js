@@ -4,6 +4,7 @@ import './custom.css';
 import withCapsService from "../../hoc";
 import { fetchStickers } from "../../../actions";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Custom = ({fetchStickers, caps}) => {
     useEffect(() => fetchStickers(), [])
@@ -19,9 +20,9 @@ const Custom = ({fetchStickers, caps}) => {
                     return (
                         <div key={data.id} className="card flex-row">
                             <div className="card-desc card-slider">
-                                <a href={stickerLink}>
+                                <Link to={stickerLink}>
                                 <img className="card-img" src={require('./custom-img/adidas.jpg')} alt=""/>
-                                </a>
+                                </Link>
                                 <div className="card-text-desc">
                                     <p className="desc-year">2022</p>
                                     <p className="desc-tittle">{data.brand.name}</p>

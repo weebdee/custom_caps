@@ -1,22 +1,27 @@
 import React, { useEffect } from "react";
 import Slider from "../main_page/slider";
 import { connect } from "react-redux";
-import { fetchCap } from "../../actions";
+import {fetchCap, CapsAddedToCart, CapsRemoveFromCart} from "../../actions";
 import withCapsService from "../hoc";
-
 import './product-c.css'
+import { Link } from "react-router-dom";
 
 
-const ProductInfo = ({selectedItemId, fetchCap, cap}) => {
+
+const ProductInfo = ({selectedItemId, fetchCap, cap, CapsAddedToCart, CapsRemoveFromCart}) => {
+
+
     useEffect (() => fetchCap(selectedItemId), [])
     const mapSizes = cap.size
+
+
 
     return (
         <div className='main-container'>
             <div className='links-container'>
-                <a href='/' className='from-page'>Home</a>
+                <Link to='/' className='from-page'>Home</Link>
                 <p className='from-page'>&gt;</p>
-                <a href='/catalog/' className='from-page'>Каталог</a>
+                <Link to='/catalog/' className='from-page'>Каталог</Link>
                 <p className='from-page'>&gt;</p>
                 <p className='to-page'>Детали Продукта</p>
             </div>
@@ -55,9 +60,9 @@ const ProductInfo = ({selectedItemId, fetchCap, cap}) => {
                         }
                     </div>
                     <div className='product-count p-c-top'>
-                        <input type="button" value='-'/>
+                        <input onClick={() => CapsRemoveFromCart(cap.id)} type="button" value='-'/>
                         <p>1</p>
-                        <input type="button" value='+'/>
+                        <input onClick={() => CapsAddedToCart(cap.id)}  type="button" value='+'/>
                     </div>
                     
                 </div>
@@ -69,7 +74,7 @@ const ProductInfo = ({selectedItemId, fetchCap, cap}) => {
                     </div>
 
                     <div className='c-d-price'>{cap.price}сом</div>
-                    <button className='btn yellow-btn c-d-btn'>Добавить в корзину</button>
+                    <button onClick={() => CapsAddedToCart(cap.id)} className='btn yellow-btn c-d-btn'>Добавить в корзину</button>
 
                 </div>
                 
@@ -91,7 +96,12 @@ const ProductInfo = ({selectedItemId, fetchCap, cap}) => {
 const mapStateToProps = (state) => {return state}
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-    return {fetchCap: (selectedItemId) => fetchCap(dispatch, ownProps.capsService, selectedItemId)}
+    return {
+        fetchCap: (selectedItemId) => fetchCap(dispatch, ownProps.capsService, selectedItemId),
+        CapsAddedToCart: (capsId) =>  dispatch(CapsAddedToCart(capsId)),
+        CapsRemoveFromCart: (capsId) =>  dispatch(CapsRemoveFromCart(capsId))
+
+    }
 }
 
 

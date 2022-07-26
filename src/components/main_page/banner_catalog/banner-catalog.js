@@ -8,6 +8,7 @@ import { connect } from "react-redux";
 
 
 import './banner-cat.css'
+import { Link } from "react-router-dom";
 
 const BannerCatalog = ({fetchStickers, caps}) => {
     useEffect(() => fetchStickers(), [])
@@ -27,9 +28,9 @@ const BannerCatalog = ({fetchStickers, caps}) => {
                                     <p className="desc-class">{data.name}</p>
                                     <div className="card-desc-price">{data.price}c</div>
                                 </div>
-                                <a href={stickerLink}>
+                                <Link to={stickerLink}>
                                 <img className="card-img" src={imgCaps} alt="caps-img"/>
-                                </a>
+                                </Link>
                             </div>
                             </div>
                         )
@@ -43,7 +44,7 @@ const BannerCatalog = ({fetchStickers, caps}) => {
                     Supreme & New Era
                 </h1>
                 <p className='c-minor-desc'>collaboration</p>
-                <a href='/catalog/' className="c-desc-btn purple-btn btn">Открыть каталог</a> 
+                <Link to='/catalog/' className="c-desc-btn purple-btn btn">Открыть каталог</Link> 
             </div>
 
             <img className='banner-c-caps' src={imgUrl} alt='banner-img'></img>

@@ -28,16 +28,16 @@ const Header = ({capsService}) => {
     return (
         <div className='header-container'>
             <div className='d-flex header-in'>
-                <a href='/'>
+                <Link to='/'>
                     <img className='logo-img-header' src={require('./header-img/logo.png')} alt={'logo-img'} ></img>
-                </a>
+                </Link>
                 <ul className="list-container d-flex">
                     <li className='list-group-a'>
-                        <a className='list-group-a' href='/catalog/'> Каталог </a>
+                        <Link className='list-group-a' to='/catalog/'> Каталог </Link>
                     </li>
                     <li className='list-group-a list-group-a-adap'>Кастомные</li>
-                    <li className='list-group-a'><a className='list-group-a' href='/#brand'>Бренды</a></li>
-                    <li className='list-group-a'><a className='list-group-a' href='/#aboutUs'>О нас</a></li>
+                    <li className='list-group-a'><Link className='list-group-a' to='/#brand'>Бренды</Link></li>
+                    <li className='list-group-a'><Link className='list-group-a' to='/#aboutUs'>О нас</Link></li>
                 </ul>
                 
                 <div className='input-container '>
@@ -60,7 +60,7 @@ const Header = ({capsService}) => {
                                     }) : null
                             }
                         </ul>
-                        <a href='/search-res/'><i className="fa-solid fa-magnifying-glass"></i></a>
+                        <Link to='/search-res/'><i className="fa-solid fa-magnifying-glass"></i></Link>
                 </form>
                 </div>
                 <Link to='/cart/'>

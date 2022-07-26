@@ -16,16 +16,16 @@ function Footer(props) {
                         <div className='products'>
                             <h4>Продукция</h4>
                             <Link to='/catalog/'><p>Кепки</p></Link>
-                            <a href="/"><p>Шапки</p></a>
-                            <a href="/"><p>Панамки</p></a>
-                            <a href="/"><p>Кастомизация</p></a>
-                            <a href="/"><p>Другая продукция</p></a>
-                            <a href="/"><p>Эксклюзив</p></a>
+                            <Link to="/"><p>Шапки</p></Link>
+                            <Link to="/"><p>Панамки</p></Link>
+                            <Link to="/"><p>Кастомизация</p></Link>
+                            <Link to="/"><p>Другая продукция</p></Link>
+                            <Link to="/"><p>Эксклюзив</p></Link>
                         </div>
                         <div className='about-company'>
                             <h4>О компании</h4>
-                            <a href="/"><p>О нас</p></a>
-                            <a href="/"><p>Контакты</p></a>
+                            <Link to="/"><p>О нас</p></Link>
+                            <Link to="/"><p>Контакты</p></Link>
                         </div>
                     </div>
 
@@ -34,7 +34,7 @@ function Footer(props) {
                         <form action="" className='form'>
                             <input type="text" placeholder='Email address' className='email-text' />
                             <button>
-                                <a href="/"><img className='submit' src={require('../footer/images/sub.png')} alt="sub"/></a>
+                                <Link to="/"><img className='submit' src={require('../footer/images/sub.png')} alt="sub"/></Link>
                             </button>
                         </form>
                     </div>
@@ -42,9 +42,9 @@ function Footer(props) {
                 <hr className='hr-adap'/>
                 <div className='cards'>
                     <div className='card-style'>
-                        <a href="/"><img className='vector' src={require('../footer/images/vector.png')} alt="vector"/></a>
-                        <a href="/"><img className='mastercard' src={require('../footer/images/mastercard.png')} alt="master"/></a>
-                        <a href="/"><img className='visa' src={require('../footer/images/visa.png')} alt="visa"/></a>
+                        <Link to="/"><img className='vector' src={require('../footer/images/vector.png')} alt="vector"/></Link>
+                        <Link to="/"><img className='mastercard' src={require('../footer/images/mastercard.png')} alt="master"/></Link>
+                        <Link to="/"><img className='visa' src={require('../footer/images/visa.png')} alt="visa"/></Link>
                     </div>
                     <h4>+996 755 999820</h4>
                 </div>
@@ -54,7 +54,7 @@ function Footer(props) {
             <div className='main'>
                 <div className='logo'>
                     <div className='logo-img'>
-                        <a href="/"><img className='logo-img-footer' src={require('../header/header-img/logo.png')} alt="logo"/></a>
+                        <Link to="/"><img className='logo-img-footer' src={require('../header/header-img/logo.png')} alt="logo"/></Link>
                     </div>
                     <div className='logo-text'>
                         <h6>CUSTOM CAPS</h6>
@@ -63,13 +63,13 @@ function Footer(props) {
                 </div>
                     <div className='icons'>
                         <div className='oval'>
-                            <a href="https://www.instagram.com/"><img className='iconsOfFooter' src={instagram} alt="instagram"/></a>
+                            <Link to="https://www.instagram.com/"><img className='iconsOfFooter' src={instagram} alt="instagram"/></Link>
                         </div>
                         <div className='oval'>
-                            <a href="https://www.facebook.com/"><img className='iconsOfFooter' src={facebook} alt="facebook"/></a>
+                            <Link to="https://www.facebook.com/"><img className='iconsOfFooter' src={facebook} alt="facebook"/></Link>
                         </div>
                         <div className='oval'>
-                            <a href="https://www.twitter.com/"><img className='iconsOfFooter' src={twitter} alt="twitter"/></a>
+                            <Link to="https://www.twitter.com/"><img className='iconsOfFooter' src={twitter} alt="twitter"/></Link>
                         </div>
                     </div>
                 </div>

@@ -5,6 +5,7 @@ import withCapsService from "../hoc";
 import { connect } from "react-redux";
 
 import './catalog.css'
+import { Link } from "react-router-dom";
 
 const Catalog = ({fetchCaps, loading, error, capsAcsending, caps}) => {
     useEffect(() => fetchCaps() ,[])
@@ -13,9 +14,9 @@ const Catalog = ({fetchCaps, loading, error, capsAcsending, caps}) => {
     return (
         <div className='catalog-container'>
             <div className='links-container main-container'>
-                <a href='/' className='from-page'>Home</a>
+                <Link to='/' className='from-page'>Home</Link>
                 <p className='from-page'>&gt;</p>
-                <a href='/catalog/' className='to-page'>Каталог</a>
+                <Link to='/catalog/' className='to-page'>Каталог</Link>
             </div>
             <div className='catalog-banner-container'>
                 <div className='catalog-b-desc'>

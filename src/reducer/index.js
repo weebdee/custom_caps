@@ -1,3 +1,59 @@
+
+const updateCartItems = (cartItems, item, idx) => {
+
+    if (item.count === 0) {
+        return [
+            ...cartItems.slice(0, idx),
+            ...cartItems.slice(idx + 1)
+        ];
+    }
+
+    if (idx === -1) {
+        return [
+            ...cartItems,
+            item
+        ];
+    }
+
+    return [
+        ...cartItems.slice(0, idx),
+        item,
+        ...cartItems.slice(idx + 1)
+    ];
+};
+
+const updateCartItem = (cap, item = {}, quantity) => {
+    const {
+        id = cap.id,
+        count = 0,
+        title = cap.name,
+        total = 0 } = item,
+        brandName = cap.brand.name;
+
+    return {
+        id,
+        title,
+        count: count + quantity,
+        total: total + quantity*cap.price,
+        brandName
+    };
+};
+const updateOrder = (state, capsId, quantity) => {
+    const { caps, cartItems } = state;
+
+    const cap = caps.find(({id}) => id === capsId);
+    const itemIndex = cartItems.findIndex(({id}) => id === capsId);
+    const item = cartItems[itemIndex];
+
+    const newItem = updateCartItem(cap, item, quantity);
+    return {
+        ...state,
+        cartItems: updateCartItems(cartItems, newItem, itemIndex)
+    };
+};
+
+
+
 const acsendingOrder = (state) => {
     const selectBox = document.getElementById("sort-product");
     var val = selectBox.options[selectBox.selectedIndex].value;
@@ -40,24 +96,7 @@ const defaultState = {
     caps: [],
     loading: false,
     error: false,
-    cartItems: [
-        {
-        itemPic: 1,
-        amount: 2,
-        size: 'L',
-        brandName: 'blahblah',
-        capName: 'saveuslord',
-        price: '3200',
-        },
-        {
-            itemPic: 1,
-            amount: 2,
-            size: 'S',
-            brandName: 'blahblah',
-            capName: 'saveuslord',
-            price: '3200',
-        }
-    ],
+    cartItems: [],
     acsending: false,
     cap: []
 }
@@ -94,6 +133,10 @@ const reducer = (state=defaultState, action) => {
             };
         case 'CAPS_ACSENDING':
             return acsendingOrder(state)
+        case 'CAP_ADD_TO_CART':
+            return updateOrder(state, action.payload, 1 )
+        case 'CAP_REMOVE_FROM_CART':
+            return updateOrder(state, action.payload, -1 )
         default:
             return state;
     }

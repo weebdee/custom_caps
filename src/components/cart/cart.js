@@ -5,38 +5,49 @@ import "./PopUpWindow/PopUpWindow";
 import {useState} from "react";
 import Modal from "./PopUpWindow/PopUpWindow";
 import { connect } from "react-redux";
+import * as actions from "../../actions";
+import { Link } from "react-router-dom";
 
 
-const Cart = ({items} ) => {
+
+
+
+
+const Cart = ({items, CapsAddedToCart, CapsRemoveFromCart} ) => {
     const [openModal, setOpenModal] = useState(false);
+    console.log(items);
+   const content = items?.map((item, idx) => {
+       return (
+           <div key={item.id}>
+               <div key={idx} className='cart'>
+                   <img src={kepka3} alt="cap-3"/>
+                   <div className='product-count'>
+                       <input onClick={() => CapsRemoveFromCart(item.id)} type="button" value='-'/>
+                       <p>{item.count}</p>
+                       <input onClick={() => CapsAddedToCart(item.id)} type="button" value='+'/>
+                   </div>
+                   <input className='cart-inp' type="button" value={item.size}/>
+                   <div className='text-cart'>
+                       <h4>{item.brandName}</h4>
+                       <p>{item.capName}</p>
+                   </div>
+                   <h2>{item.total}сом </h2>
+
+                 </div>
+           </div>
+       )
+   })
+
+
+
     return (
         <div className='catalog-container main-container'>
             <div className='links-container'>
-                <a href='/' className='from-page'>Home</a>
+                <Link to='/' className='from-page'>Home</Link>
                 <p className='from-page'>&gt;</p>
-                <a href='/cart/' className='to-page'>Корзина</a>
             </div>
             <hr className='thick-hr'/>
-            <div>
-                {items.map((item, idx) => {
-                    return (
-                        <div key={idx} className='cart'>
-                            <img src={kepka3} alt="cap-3"/>
-                            <div className='product-count'>
-                                <input type="button" value='-'/>
-                                <p>{item.amount}</p>
-                                <input type="button" value='+'/>
-                            </div>
-                            <input className='cart-inp' type="button" value={item.size}/>
-                            <div className='text-cart'>
-                                <h4>{item.brandName}</h4>
-                                <p>{item.capName}</p>
-                            </div>
-                            <h2>{item.price}сом</h2>
-                        </div>
-                    )
-                })}
-            </div>
+            {content}
             <hr className='thick-hr'/>
             <div className='cart-info'>
                 <h2>Ваша информация</h2>
@@ -55,4 +66,5 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps)(Cart);
+
+export default connect(mapStateToProps, actions)(Cart);

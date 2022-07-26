@@ -9,9 +9,10 @@ import 'swiper/css/navigation';
 import { connect } from 'react-redux';
 import withCapsService from '../../hoc';
 import { fetchStickers } from '../../../actions';
+import { Link } from 'react-router-dom';
 
 const Slider = ({fetchStickers, caps}) => {
-    useEffect(() => fetchStickers(),[])
+    useEffect(() => fetchStickers(),[fetchStickers])
     return (
             <div className="swiper-inner main-container">
                 <i className='arrow-left fa-solid fa-angle-left' alt="arrow-left"></i>
@@ -30,8 +31,8 @@ const Slider = ({fetchStickers, caps}) => {
                                 <SwiperSlide key={data.id}>
                                     {
                                         <div className='swiper-card'>
-                                            <a href={sliderLink}><img className='sw-card-img' src={require('./slider-img/kepka1.png')}
-                                                alt="slider-cap"/></a>
+                                            <Link to={sliderLink}><img className='sw-card-img' src={require('./slider-img/kepka1.png')}
+                                                alt="slider-cap"/></Link>
                                             <div className="card-body">
                                                 <div className='kepka-brand'>{data.brand.name}</div>
                                                 <div className='kepka-model'>{data.name}</div>

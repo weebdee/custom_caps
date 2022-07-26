@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import './catalog-item.css'
 
 const CatalogItem = ({ cap }) => {
@@ -7,7 +8,7 @@ const CatalogItem = ({ cap }) => {
     return (
         <div className='catalog-product'>
             <div className='product-img-container'>
-                <a href={newLink}><img src={capsimage.photo} className='caps-product-img' alt='prod-img'/></a>
+                <Link to={newLink}><img src={capsimage.photo} className='caps-product-img' alt='prod-img'/></Link>
             </div>
             <div className='caps-product-content'>
                 <div className='product-desc'>

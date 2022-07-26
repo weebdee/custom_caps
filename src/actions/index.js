@@ -20,6 +20,16 @@ const capsAcsending = () => ({
     type: 'CAPS_ACSENDING'
 }) 
 
+const CapsAddedToCart = (capsId) => ({
+    type: 'CAP_ADD_TO_CART',
+    payload: capsId,
+})
+
+const CapsRemoveFromCart = (itemId) => ({
+    type: 'CAP_REMOVE_FROM_CART',
+    payload: itemId,
+})
+
 const fetchCaps = (dispatch, capsService) => {
     dispatch(capsRequested())
             capsService.getAllCaps().then(caps => {
@@ -48,4 +58,5 @@ const fetchStickers = (dispatch, capsService) => {
 }
 
 
-export {fetchCaps, capsAcsending, fetchCap, fetchStickers}
+
+export {fetchCaps, capsAcsending, fetchCap, fetchStickers, CapsAddedToCart,CapsRemoveFromCart }
