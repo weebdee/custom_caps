@@ -23,13 +23,19 @@ const updateCartItems = (cartItems, item, idx) => {
 };
 
 const updateCartItem = (cap, item = {}, quantity, sizing) => {
+    const img = cap.capsimage.map(i => {
+        return i
+    })
+    const i = img.map(el => {return el.photo})
+    
     const {
         id = cap.id,
         count = 0,
         title = cap.name,
         total = 0 } = item,
         brandName = cap.brand.name,
-        size = sizing
+        size = sizing,
+        pic = i
 
     return {
         id,
@@ -37,7 +43,8 @@ const updateCartItem = (cap, item = {}, quantity, sizing) => {
         count: count + quantity,
         total: total + quantity*cap.price,
         brandName,
-        size
+        size,
+        pic
     };
 };
 const updateOrder = (state, capsId, quantity, size) => {

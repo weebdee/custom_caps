@@ -25,7 +25,6 @@ const ProductInfo = ({selectedItemId, fetchCap, cap, AddedToOrder}) => {
             i++;
         }
     }
-    console.log(size);
     const incAmount = () => {
         setCounter(count => count + 1);
     };
@@ -38,7 +37,6 @@ const ProductInfo = ({selectedItemId, fetchCap, cap, AddedToOrder}) => {
     const mapSizes = cap.size
     
     
-
     return (
         <div className='main-container'>
             <div className='links-container'>
@@ -55,7 +53,7 @@ const ProductInfo = ({selectedItemId, fetchCap, cap, AddedToOrder}) => {
             <div className='product-details'>
                 <div className='caps-details-img'>
                     <div className='main-cap-container'>
-                        <img className='main-cap-img' src={require('./images/main-img.png')} alt='main-c-img'/>
+                        <img className='main-cap-img' src={cap.pic} alt='main-c-img'/>
                     </div>
                     <div className='cap-details'>
                         <div className='detail-cap-container'>

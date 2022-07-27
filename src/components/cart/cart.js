@@ -38,13 +38,12 @@ const Cart = ({items, CapsAddedToCart, CapsRemoveFromCart} ) => {
         }).then(() => setOpenModal(true)).catch(() => setOpenModal(false))
         
     }
-
+    
     const content = items?.map((item, idx) => {
-        console.log(item);
        return (
            <div key={item.id}>
                <div key={idx} className='cart'>
-                   <img src={kepka3} alt="cap-3"/>
+                   <img className='cart-cap-img' src={item.pic} alt="cap-3"/>
                    <div className='product-count'>
                        <input onClick={() => CapsRemoveFromCart(item.id, item.size)} type="button" value='-'/>
                        <p>{item.count}</p>

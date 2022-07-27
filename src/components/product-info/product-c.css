@@ -3,12 +3,19 @@
     
 }
 .main-cap-container{
-    background: #FFFFFF;
+    background: black;
     border: 1px solid #C4C4C4;
     border-radius: 20px;
+    width: 550px;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
 }
 .main-cap-img {
     padding: 50px;
+    width: 500px;
+    height: 400px;
 }
 .detail-cap-container {
     background: #FFFFFF;

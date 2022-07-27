@@ -10,8 +10,6 @@ const Custom = ({fetchStickers, caps}) => {
     useEffect(() => fetchStickers(), [])
     return (
     <div className='custom-card-container'>
-        
-        <a href='/#brand' name='brand'/>
        
         <div className="card-container card-slider">
             {

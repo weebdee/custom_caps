@@ -19,8 +19,8 @@ const Header = () => {
                         <Link className='list-group-a' to='/catalog/'> Каталог </Link>
                     </li>
                     <li className='list-group-a list-group-a-adap'>Кастомные</li>
-                    <li className='list-group-a'><a className='list-group-a' href='/#brand'>Бренды</a></li>
-                    <li className='list-group-a'><a className='list-group-a' href='/#aboutUs'>О нас</a></li>
+                    <li className='list-group-a'><Link className='list-group-a' to='/'>Бренды</Link></li>
+                    <li className='list-group-a'><Link className='list-group-a' to='/'>О нас</Link></li>
                 </ul>
                 <SearchPanel />
                 <Link to='/cart/'>

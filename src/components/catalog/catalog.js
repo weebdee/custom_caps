@@ -9,8 +9,7 @@ import { Link } from "react-router-dom";
 
 const Catalog = ({fetchCaps, loading, error, capsAcsending, caps}) => {
     useEffect(() => fetchCaps() ,[])
-    
-    
+
     return (
         <div className='catalog-container'>
             <div className='links-container main-container'>

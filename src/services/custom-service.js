@@ -28,12 +28,17 @@ export default class CustomService {
   }
 
   _transformCap = (cap) => {
+    const img = cap.capsimage
+    const photo = img.map(pic => {
+      return pic.photo
+    })
     return {
       id: cap.id,
       brand: cap.brand.name,
       name: cap.name,
       price: cap.price,
-      size: cap.size
+      size: cap.size,
+      pic: photo,
     }
   };
 
