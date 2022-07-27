@@ -15,17 +15,13 @@ import { Link } from "react-router-dom";
 
 const Cart = ({items, CapsAddedToCart, CapsRemoveFromCart} ) => {
     const [openModal, setOpenModal] = useState(false);
-
+    const itemsPrice = items.map((item) => item.total).reduce((a, b) => a + b, 0)
     const btnFunc = (e) => {
         e.preventDefault()
-        console.log(items);
         const user = [e.target[0].value, e.target[1].value];
-        console.log(user);
         const itemsName = items.map((item) => item.title)
-        console.log(itemsName);
-        const itemsPrice = items.map((item) => item.total).reduce((a, b) => a + b, 0)
+        
 
-        console.log(itemsPrice);
         fetch('http://164.92.190.147:8003/api/orders/', {
             method: 'POST',
             headers: {
@@ -44,19 +40,20 @@ const Cart = ({items, CapsAddedToCart, CapsRemoveFromCart} ) => {
     }
 
     const content = items?.map((item, idx) => {
+        console.log(item);
        return (
            <div key={item.id}>
                <div key={idx} className='cart'>
                    <img src={kepka3} alt="cap-3"/>
                    <div className='product-count'>
-                       <input onClick={() => CapsRemoveFromCart(item.id)} type="button" value='-'/>
+                       <input onClick={() => CapsRemoveFromCart(item.id, item.size)} type="button" value='-'/>
                        <p>{item.count}</p>
-                       <input onClick={() => CapsAddedToCart(item.id)} type="button" value='+'/>
+                       <input onClick={() => CapsAddedToCart(item.id, item.size)} type="button" value='+'/>
                    </div>
                    <input className='cart-inp' type="button" value={item.size}/>
                    <div className='text-cart'>
                        <h4>{item.brandName}</h4>
-                       <p>{item.capName}</p>
+                       <p>{item.title}</p>
                    </div>
                    <h2>{item.total}сом </h2>
 
@@ -77,7 +74,11 @@ const Cart = ({items, CapsAddedToCart, CapsRemoveFromCart} ) => {
             <hr className='thick-hr'/>
             {content}
             <hr className='thick-hr'/>
-    
+            <div className='total-sum-c'>
+                <div >Всего:</div>
+                <div className='total-sum'>{itemsPrice}сом</div>
+            </div>
+            <hr className='thick-hr'/>
             <form onSubmit={(e) => btnFunc(e)} className='cart-info'>
                 <h2>Ваша информация</h2>
                 <input required className='inp' type="text" placeholder='Имя'/>

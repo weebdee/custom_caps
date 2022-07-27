@@ -51,11 +51,10 @@
 }
 
 .cart-info {
-    margin-top: 50px;
     color: #2F2E2E;
     display: flex;
     flex-direction: column;
-
+    margin-top: 35px;
 }
 
 .inp {
@@ -82,4 +81,16 @@
     font-size: 25px;
     background: #FFFFFF;
     border: 1px solid #000000;
+}
+.total-sum-c {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #000000;
+    font-size: 25px;
+    font-weight: 600;
+}
+.total-sum {
+    color: #FDDB16;
 }

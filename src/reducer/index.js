@@ -22,30 +22,32 @@ const updateCartItems = (cartItems, item, idx) => {
     ];
 };
 
-const updateCartItem = (cap, item = {}, quantity) => {
+const updateCartItem = (cap, item = {}, quantity, sizing) => {
     const {
         id = cap.id,
         count = 0,
         title = cap.name,
         total = 0 } = item,
-        brandName = cap.brand.name;
+        brandName = cap.brand.name,
+        size = sizing
 
     return {
         id,
         title,
         count: count + quantity,
         total: total + quantity*cap.price,
-        brandName
+        brandName,
+        size
     };
 };
-const updateOrder = (state, capsId, quantity) => {
+const updateOrder = (state, capsId, quantity, size) => {
     const { caps, cartItems } = state;
 
     const cap = caps.find(({id}) => id === capsId);
     const itemIndex = cartItems.findIndex(({id}) => id === capsId);
     const item = cartItems[itemIndex];
-
-    const newItem = updateCartItem(cap, item, quantity);
+ 
+    const newItem = updateCartItem(cap, item, quantity, size);
     return {
         ...state,
         cartItems: updateCartItems(cartItems, newItem, itemIndex)
@@ -145,10 +147,12 @@ const reducer = (state=defaultState, action) => {
             };
         case 'CAPS_ACSENDING':
             return acsendingOrder(state)
+        case 'ADD_TO_ORDER':
+            return updateOrder(state, action.payload, action.count, action.size)
         case 'CAP_ADD_TO_CART':
-            return updateOrder(state, action.payload, 1 )
+            return updateOrder(state, action.payload, 1, action.size)
         case 'CAP_REMOVE_FROM_CART':
-            return updateOrder(state, action.payload, -1 )
+            return updateOrder(state, action.payload, -1, action.size)
         default:
             return state;
     }

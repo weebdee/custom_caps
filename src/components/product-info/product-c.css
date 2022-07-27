@@ -85,7 +85,7 @@
     border: 1px solid #C4C4C4;
     border-radius: 8px;
 }
-.cart-inp-c:hover{
+.cart-inp-c-active {
     font-weight: 500;
     font-size: 24px;
     line-height: 29px;

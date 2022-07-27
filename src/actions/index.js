@@ -30,15 +30,23 @@ const getSearchItem = (valueData) => ({
     payload: valueData,
 }
 )
-
-const CapsAddedToCart = (capsId) => ({
-    type: 'CAP_ADD_TO_CART',
+const AddedToOrder = (capsId, count, size) => ({
+    type: 'ADD_TO_ORDER',
     payload: capsId,
+    count: count,
+    size: size,
 })
 
-const CapsRemoveFromCart = (itemId) => ({
+const CapsAddedToCart = (capsId, size) => ({
+    type: 'CAP_ADD_TO_CART',
+    payload: capsId,
+    size: size
+})
+
+const CapsRemoveFromCart = (itemId, size) => ({
     type: 'CAP_REMOVE_FROM_CART',
     payload: itemId,
+    size: size
 })
 
 const fetchCaps = (dispatch, capsService) => {
@@ -70,4 +78,4 @@ const fetchStickers = (dispatch, capsService) => {
 
 
 
-export {fetchCaps, capsAcsending, fetchCap, fetchStickers, CapsAddedToCart,CapsRemoveFromCart, getCapsName, getSearchItem}
+export {fetchCaps, capsAcsending, fetchCap, fetchStickers, CapsAddedToCart,CapsRemoveFromCart, getCapsName, getSearchItem, AddedToOrder}

@@ -1,20 +1,43 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "../main_page/slider";
 import { connect } from "react-redux";
-import {fetchCap, CapsAddedToCart, CapsRemoveFromCart} from "../../actions";
+import {fetchCap, AddedToOrder} from "../../actions";
 import withCapsService from "../hoc";
 import './product-c.css'
 import { Link } from "react-router-dom";
 
 
 
-const ProductInfo = ({selectedItemId, fetchCap, cap, CapsAddedToCart, CapsRemoveFromCart}) => {
+const ProductInfo = ({selectedItemId, fetchCap, cap, AddedToOrder}) => {
+    const [counter, setCounter] = useState(1);
 
+    const [size, setSize] = useState()
+    
+    const onSize = (e) => {
+        e.preventDefault()
+        let i = 0
+        while (i < e.target.length) {
+            if (e.target[i].value === size) {
+                e.target[i].classList.add('cart-inp-c-active')
+            } else {
+                e.target[i].classList.remove('cart-inp-c-active')
+            }
+            i++;
+        }
+    }
+    console.log(size);
+    const incAmount = () => {
+        setCounter(count => count + 1);
+    };
+    
+    const decAmount = () => {
+        setCounter(count => count - 1);
+    };
 
     useEffect (() => fetchCap(selectedItemId), [selectedItemId])
     const mapSizes = cap.size
-
-
+    
+    
 
     return (
         <div className='main-container'>
@@ -51,18 +74,17 @@ const ProductInfo = ({selectedItemId, fetchCap, cap, CapsAddedToCart, CapsRemove
                 
                 <div className='caps-details-info'>
                     
-                    <div className='c-d-sizes'>
+                    <form onSubmit={(e) => onSize(e)} className='c-d-sizes' id='form-size'>
                         {
-                            mapSizes?.map((val) => {
-                            return (
-                            <input key={val.value} className='cart-inp-c' type="button" value={val.value}/>)
-                            })
+                            mapSizes?.map((val) => (
+                                <input onClick={(e) => setSize(e.target.value)} key={val.value} className='cart-inp-c' type='submit' value={val.value} />))
                         }
-                    </div>
+                    </form>
+                    
                     <div className='product-count p-c-top'>
-                        <input onClick={() => CapsRemoveFromCart(cap.id)} type="button" value='-'/>
-                        <p>1</p>
-                        <input onClick={() => CapsAddedToCart(cap.id)}  type="button" value='+'/>
+                        <input onClick={decAmount} className='cart-inp-c' type="button" value='-'/>
+                        <span >{counter}</span>
+                        <input onClick={incAmount} className='cart-inp-c'  type="button" value='+'/>
                     </div>
                     
                 </div>
@@ -74,7 +96,7 @@ const ProductInfo = ({selectedItemId, fetchCap, cap, CapsAddedToCart, CapsRemove
                     </div>
 
                     <div className='c-d-price'>{cap.price}сом</div>
-                    <button onClick={() => CapsAddedToCart(cap.id)} className='btn yellow-btn c-d-btn'>Добавить в корзину</button>
+                    <button onClick={() => AddedToOrder(cap.id, counter, size)} className='btn yellow-btn c-d-btn'>Добавить в корзину</button>
 
                 </div>
                 
@@ -98,8 +120,7 @@ const mapStateToProps = (state) => {return state}
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
         fetchCap: (selectedItemId) => fetchCap(dispatch, ownProps.capsService, selectedItemId),
-        CapsAddedToCart: (capsId) =>  dispatch(CapsAddedToCart(capsId)),
-        CapsRemoveFromCart: (capsId) =>  dispatch(CapsRemoveFromCart(capsId))
+        AddedToOrder: (capsId, count, size) =>  dispatch(AddedToOrder(capsId, count, size))
 
     }
 }
