@@ -6,6 +6,7 @@ import SearchRes from "../search-result/search-result";
 import Cart from "../cart";
 import ProductInfo from "../product-info";
 import {BrowserRouter as Router, Route} from "react-router-dom";
+import ScrollToTop from "../scroll-top";
 
 import './app.css'
 
@@ -13,6 +14,7 @@ function App() {
   return (
     <div className="app-container">
       <Router> 
+        <ScrollToTop/>
         <Header/>
         <Route path='/' exact={true} component={MainPage}/>
         <Route path='/catalog/' 
