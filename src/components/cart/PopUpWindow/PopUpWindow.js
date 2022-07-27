@@ -9,6 +9,7 @@ function Modal(){
 
     const handleHistory = () => {
         history.push("/");
+        document.location.reload(true)
     }
     return (
             <div className="popup">

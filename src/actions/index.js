@@ -20,6 +20,17 @@ const capsAcsending = () => ({
     type: 'CAPS_ACSENDING'
 }) 
 
+const getCapsName = (name) => ({
+    type: 'GET_CAPS_NAME',
+    payload: name,
+})
+
+const getSearchItem = (valueData) => ({
+    type: 'GET_SEARCH_ITEM',
+    payload: valueData,
+}
+)
+
 const CapsAddedToCart = (capsId) => ({
     type: 'CAP_ADD_TO_CART',
     payload: capsId,
@@ -59,4 +70,4 @@ const fetchStickers = (dispatch, capsService) => {
 
 
 
-export {fetchCaps, capsAcsending, fetchCap, fetchStickers, CapsAddedToCart,CapsRemoveFromCart }
+export {fetchCaps, capsAcsending, fetchCap, fetchStickers, CapsAddedToCart,CapsRemoveFromCart, getCapsName, getSearchItem}

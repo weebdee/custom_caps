@@ -98,7 +98,9 @@ const defaultState = {
     error: false,
     cartItems: [],
     acsending: false,
-    cap: []
+    cap: [],
+    name: '',
+    searchItem: [],
 }
 
 
@@ -123,6 +125,16 @@ const reducer = (state=defaultState, action) => {
                 cap: action.payload,
                 error: false,
                 loading: false,
+            };
+        case 'GET_CAPS_NAME':
+            return {
+                ...state,
+                name: action.payload
+            };
+        case 'GET_SEARCH_ITEM':
+            return {
+                ...state,
+                name: action.payload
             };
         case 'CAPS_ERROR':
             return {

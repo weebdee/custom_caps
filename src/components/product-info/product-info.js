@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 const ProductInfo = ({selectedItemId, fetchCap, cap, CapsAddedToCart, CapsRemoveFromCart}) => {
 
 
-    useEffect (() => fetchCap(selectedItemId), [])
+    useEffect (() => fetchCap(selectedItemId), [selectedItemId])
     const mapSizes = cap.size
 
 

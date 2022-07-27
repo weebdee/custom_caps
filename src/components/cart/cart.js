@@ -15,8 +15,35 @@ import { Link } from "react-router-dom";
 
 const Cart = ({items, CapsAddedToCart, CapsRemoveFromCart} ) => {
     const [openModal, setOpenModal] = useState(false);
-    console.log(items);
-   const content = items?.map((item, idx) => {
+
+    const btnFunc = (e) => {
+        e.preventDefault()
+        console.log(items);
+        const user = [e.target[0].value, e.target[1].value];
+        console.log(user);
+        const itemsName = items.map((item) => item.title)
+        console.log(itemsName);
+        const itemsPrice = items.map((item) => item.total).reduce((a, b) => a + b, 0)
+
+        console.log(itemsPrice);
+        fetch('http://164.92.190.147:8003/api/orders/', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                'X-CSRFToken': 'w65mOZ6SL4hVvz3qo3M1nT5Yy8WQ5jIMGxTp1g5xOuxqx1OKhw6OlHy6qw7PUJtU',
+            },
+            body: {
+                "item": itemsName,
+                "user": user,
+                "price": itemsPrice,
+
+            },
+        }).then(() => setOpenModal(true)).catch(() => setOpenModal(false))
+        
+    }
+
+    const content = items?.map((item, idx) => {
        return (
            <div key={item.id}>
                <div key={idx} className='cart'>
@@ -33,10 +60,10 @@ const Cart = ({items, CapsAddedToCart, CapsRemoveFromCart} ) => {
                    </div>
                    <h2>{item.total}сом </h2>
 
-                 </div>
-           </div>
-       )
-   })
+                </div>
+            </div>
+        )
+    })
 
 
 
@@ -45,17 +72,20 @@ const Cart = ({items, CapsAddedToCart, CapsRemoveFromCart} ) => {
             <div className='links-container'>
                 <Link to='/' className='from-page'>Home</Link>
                 <p className='from-page'>&gt;</p>
+                <p className='to-page'>Cart</p>
             </div>
             <hr className='thick-hr'/>
             {content}
             <hr className='thick-hr'/>
-            <div className='cart-info'>
+    
+            <form onSubmit={(e) => btnFunc(e)} className='cart-info'>
                 <h2>Ваша информация</h2>
-                <input className='inp' type="text" placeholder='Имя'/>
-                <input className='inp' type="text" placeholder='+996 777 888 999'/>
-                <button className='btn yellow-btn cart-btn' onClick={() => setOpenModal(true)}>Купить</button>
-                {/*dont forget this => */}{openModal && <Modal/>}
-            </div>
+                <input required className='inp' type="text" placeholder='Имя'/>
+                <input required className='inp' type="tel" pattern="0[0-9]{3}[0-9]{3}[0-9]{3}" placeholder='0777888999'/>
+                <button type='submit' className='btn yellow-btn cart-btn'>Купить</button>
+            </form>
+                {/*dont forget this => */}{openModal && <Modal />}
+            
         </div>
     )
 }
