@@ -29,9 +29,9 @@ const SearchRes = ({ id, capsService }) => {
     return (
         <div className='result-container main-container'>
             <div className='links-container'>
-                <Link href='/' className='from-page'>Поиск</Link>
+                <Link to='/' className='from-page'>Поиск</Link>
                 <p className='from-page'>&gt;</p>
-                <Link href='/' className='to-page'></Link>
+                <Link to='/' className='to-page'></Link>
             </div>
             <div className='caps-catalog-flex'>
                 {

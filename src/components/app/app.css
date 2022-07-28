@@ -163,7 +163,7 @@
 }
 .caps-product-img {
     background-size: 250px;
-    width: 236px;
+    min-width: 236px;
     height: 173px;
     margin: 32px 16px 10px
 }
@@ -261,4 +261,7 @@
     font-size: 27px;
     opacity: 0.5;
 }
-
+.search-res-img {
+    width: 200px;
+    height: 160px;
+}
